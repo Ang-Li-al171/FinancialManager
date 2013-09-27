@@ -1,14 +1,14 @@
 //
-//  FinancialManagerAppDelegate.m
-//  FinancialManager
+//  FMAppDelegate.m
+//  FM
 //
-//  Created by  mac on 9/27/13.
-//  Copyright (c) 2013  mac. All rights reserved.
+//  Created by Sherry Wenshun Liu on 9/27/13.
+//  Copyright (c) 2013 Duke CS. All rights reserved.
 //
 
-#import "FinancialManagerAppDelegate.h"
+#import "FMAppDelegate.h"
 
-@implementation FinancialManagerAppDelegate
+@implementation FMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

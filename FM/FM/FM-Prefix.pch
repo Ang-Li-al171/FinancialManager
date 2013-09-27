@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'FinancialManager' target in the 'FinancialManager' project
+// Prefix header for all source files of the 'FM' target in the 'FM' project
 //
 
 #import <Availability.h>

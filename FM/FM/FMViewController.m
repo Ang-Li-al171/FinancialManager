@@ -1,18 +1,18 @@
 //
-//  FinancialManagerViewController.m
-//  FinancialManager
+//  FMViewController.m
+//  FM
 //
-//  Created by  mac on 9/27/13.
-//  Copyright (c) 2013  mac. All rights reserved.
+//  Created by Sherry Wenshun Liu on 9/27/13.
+//  Copyright (c) 2013 Duke CS. All rights reserved.
 //
 
-#import "FinancialManagerViewController.h"
+#import "FMViewController.h"
 
-@interface FinancialManagerViewController ()
+@interface FMViewController ()
 
 @end
 
-@implementation FinancialManagerViewController
+@implementation FMViewController
 
 - (void)viewDidLoad
 {
@@ -26,4 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)nextPage:(id)sender {
+    
+}
 @end

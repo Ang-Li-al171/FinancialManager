@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0450"
+   LastUpgradeVersion = "0460"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "049A795517F54A0900B0334D"
-               BuildableName = "FinancialManager.app"
-               BlueprintName = "FinancialManager"
-               ReferencedContainer = "container:FinancialManager.xcodeproj">
+               BlueprintIdentifier = "4B451E7C17F6339800A9F0BE"
+               BuildableName = "FM.app"
+               BlueprintName = "FM"
+               ReferencedContainer = "container:FM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049A795517F54A0900B0334D"
-            BuildableName = "FinancialManager.app"
-            BlueprintName = "FinancialManager"
-            ReferencedContainer = "container:FinancialManager.xcodeproj">
+            BlueprintIdentifier = "4B451E7C17F6339800A9F0BE"
+            BuildableName = "FM.app"
+            BlueprintName = "FM"
+            ReferencedContainer = "container:FM.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049A795517F54A0900B0334D"
-            BuildableName = "FinancialManager.app"
-            BlueprintName = "FinancialManager"
-            ReferencedContainer = "container:FinancialManager.xcodeproj">
+            BlueprintIdentifier = "4B451E7C17F6339800A9F0BE"
+            BuildableName = "FM.app"
+            BlueprintName = "FM"
+            ReferencedContainer = "container:FM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049A795517F54A0900B0334D"
-            BuildableName = "FinancialManager.app"
-            BlueprintName = "FinancialManager"
-            ReferencedContainer = "container:FinancialManager.xcodeproj">
+            BlueprintIdentifier = "4B451E7C17F6339800A9F0BE"
+            BuildableName = "FM.app"
+            BlueprintName = "FM"
+            ReferencedContainer = "container:FM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
