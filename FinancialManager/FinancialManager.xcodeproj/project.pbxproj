@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0492249417F559AB00EF87BC /* ObjToEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0492249317F559AB00EF87BC /* ObjToEncode.m */; };
 		049A795B17F54A0900B0334D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A795A17F54A0900B0334D /* UIKit.framework */; };
 		049A795D17F54A0900B0334D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A795C17F54A0900B0334D /* Foundation.framework */; };
 		049A795F17F54A0900B0334D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A795E17F54A0900B0334D /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0492249217F559AA00EF87BC /* ObjToEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjToEncode.h; sourceTree = "<group>"; };
+		0492249317F559AB00EF87BC /* ObjToEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjToEncode.m; sourceTree = "<group>"; };
 		049A795617F54A0900B0334D /* FinancialManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049A795A17F54A0900B0334D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		049A795C17F54A0900B0334D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				049A796917F54A0900B0334D /* FinancialManagerAppDelegate.h */,
+				0492249217F559AA00EF87BC /* ObjToEncode.h */,
+				0492249317F559AB00EF87BC /* ObjToEncode.m */,
 				049A796A17F54A0900B0334D /* FinancialManagerAppDelegate.m */,
 				049A797217F54A0900B0334D /* MainStoryboard.storyboard */,
 				049A797517F54A0900B0334D /* FinancialManagerViewController.h */,
@@ -177,6 +182,7 @@
 				049A796717F54A0900B0334D /* main.m in Sources */,
 				049A796B17F54A0900B0334D /* FinancialManagerAppDelegate.m in Sources */,
 				049A797717F54A0900B0334D /* FinancialManagerViewController.m in Sources */,
+				0492249417F559AB00EF87BC /* ObjToEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,7 @@
 				049A797C17F54A0900B0334D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
