@@ -40,12 +40,12 @@
 		04296B8017F6553700423497 /* FMCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCollection.m; sourceTree = "<group>"; };
 		04296B8317F655CE00423497 /* FMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCell.h; sourceTree = "<group>"; };
 		04296B8417F655CE00423497 /* FMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCell.m; sourceTree = "<group>"; };
-		0462F8DB17F792B4005FE399 /* FMPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
-		0462F8DC17F792B4005FE399 /* FMPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
 		0462F8DD17F792C6005FE399 /* FMBrain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBrain.h; sourceTree = "<group>"; };
 		0462F8DE17F792C6005FE399 /* FMBrain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBrain.m; sourceTree = "<group>"; };
 		0462F8DF17F792EF005FE399 /* FMPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
 		0462F8E017F792EF005FE399 /* FMPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
+		0462F8E117F794B1005FE399 /* FMTrip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTrip.h; sourceTree = "<group>"; };
+		0462F8E217F794B1005FE399 /* FMTrip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTrip.m; sourceTree = "<group>"; };
 		4B451E7D17F6339800A9F0BE /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B451E8017F6339800A9F0BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B451E8217F6339800A9F0BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,12 +99,12 @@
 		0462F8D917F79291005FE399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0462F8E117F794B1005FE399 /* FMTrip.h */,
+				0462F8E217F794B1005FE399 /* FMTrip.m */,
 				0462F8DF17F792EF005FE399 /* FMPair.h */,
 				0462F8E017F792EF005FE399 /* FMPair.m */,
 				0462F8DD17F792C6005FE399 /* FMBrain.h */,
 				0462F8DE17F792C6005FE399 /* FMBrain.m */,
-				0462F8DB17F792B4005FE399 /* FMPair.h */,
-				0462F8DC17F792B4005FE399 /* FMPair.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
