@@ -26,6 +26,7 @@
 		4B607D2117F761580070792E /* defaultPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2017F761580070792E /* defaultPic.jpg */; };
 		4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2217F763ED0070792E /* defaultEventPic.png */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
+		BCCC258017F74CE500531A9E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC257F17F74CE500531A9E /* TransController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		4B607D2217F763ED0070792E /* defaultEventPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEventPic.png; sourceTree = "<group>"; };
 		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
+		BCCC257E17F74CE500531A9E /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
+		BCCC257F17F74CE500531A9E /* TransController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				4B451E8717F6339800A9F0BE /* Supporting Files */,
 				BC7B46A317F6804D00DD5244 /* IconButton.h */,
 				BC7B46A417F6804D00DD5244 /* IconButton.m */,
+				BCCC257E17F74CE500531A9E /* TransController.h */,
+				BCCC257F17F74CE500531A9E /* TransController.m */,
 			);
 			path = FM;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				04296B8517F655CE00423497 /* FMCell.m in Sources */,
 				BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */,
 				4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */,
+				BCCC258017F74CE500531A9E /* TransController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

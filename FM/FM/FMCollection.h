@@ -11,12 +11,16 @@
 
 @interface FMCollection : UICollectionViewController
 
-@property (strong, nonatomic) NSArray *nameArray;
+@property (strong, nonatomic) NSMutableArray *nameArray;
 
-@property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @property NSInteger numItems;
 
-@property (strong, nonatomic) NSArray *transArray;
+@property (strong, nonatomic) NSMutableArray *transArray;
+
+@property (strong, nonatomic) NSString *myNewTransName;
+
+- (IBAction)createNewObj;
 
 @end
