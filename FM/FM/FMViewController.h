@@ -14,6 +14,8 @@
 
 @property(nonatomic) NSString *myNewEventName;
 @property(nonatomic) NSString *myNewEventMemo;
+@property(nonatomic) NSString *myNewEventMember;
+@property(nonatomic) UIImage *image;
 
 - (IBAction)insertNewObject;
 

@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewEventViewController : UIViewController
+@interface NewEventViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UIImage *image;
+}
 
 @property (strong, nonatomic) IBOutlet UIView *createNewEventView;
+@property (nonatomic, strong) UIPopoverController *popOver;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *photoLibraryBarButton;
+@property (weak, nonatomic) IBOutlet UITextField *nameText;
+@property (weak, nonatomic) IBOutlet UITextField *memoText;
+@property (weak, nonatomic) IBOutlet UITextField *memberText;
+
+- (IBAction)chooseExistingBarButton:(id)sender;
 
 - (IBAction)createNewEvent:(id)sender;
 
