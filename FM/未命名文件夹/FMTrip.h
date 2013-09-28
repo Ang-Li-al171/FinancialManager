@@ -28,4 +28,3 @@
 -(void) setShouldPay: (int) money WithEventIndex: (int) eventIndex WithPeopleIndex: (int) peopleIndex;
 -(void) setEventToAverageCost:(int) eventIndex;
 @end
-
