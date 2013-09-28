@@ -91,16 +91,13 @@
 
 //Add new cells
 - (void)insertNewObject {
-    
-    //display an UIAlertView
-    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Enter New Event" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    //enable user to enter
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    //make alert show
-    [alert show];
+    [self performSegueWithIdentifier:@"EventCreater" sender:self];
+
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    //TO BE REVISED
+    
     if (buttonIndex == 1) { //refer to OK button
         //get String
         NSString * tmpTextField = [alertView textFieldAtIndex:0].text;
