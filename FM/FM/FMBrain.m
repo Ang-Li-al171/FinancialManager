@@ -38,6 +38,7 @@
 -(id) initWithFile:(NSString*) filePath{
     self = [super init];
     trips = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    if (trips==NULL) trips = [[NSMutableArray alloc] init];
     return self;
 }
 
