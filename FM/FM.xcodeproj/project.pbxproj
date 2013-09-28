@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04296B8117F6553700423497 /* FMCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04296B8017F6553700423497 /* FMCollection.m */; };
+		04296B8517F655CE00423497 /* FMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04296B8417F655CE00423497 /* FMCell.m */; };
 		4B451E8117F6339800A9F0BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8017F6339800A9F0BE /* UIKit.framework */; };
 		4B451E8317F6339800A9F0BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8217F6339800A9F0BE /* Foundation.framework */; };
 		4B451E8517F6339800A9F0BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8417F6339800A9F0BE /* CoreGraphics.framework */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04296B7F17F6553700423497 /* FMCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCollection.h; sourceTree = "<group>"; };
+		04296B8017F6553700423497 /* FMCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCollection.m; sourceTree = "<group>"; };
+		04296B8317F655CE00423497 /* FMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCell.h; sourceTree = "<group>"; };
+		04296B8417F655CE00423497 /* FMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCell.m; sourceTree = "<group>"; };
 		4B451E7D17F6339800A9F0BE /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B451E8017F6339800A9F0BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B451E8217F6339800A9F0BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +92,10 @@
 				4B451E8F17F6339800A9F0BE /* FMAppDelegate.h */,
 				4B451E9017F6339800A9F0BE /* FMAppDelegate.m */,
 				4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */,
+				04296B8317F655CE00423497 /* FMCell.h */,
+				04296B8417F655CE00423497 /* FMCell.m */,
+				04296B7F17F6553700423497 /* FMCollection.h */,
+				04296B8017F6553700423497 /* FMCollection.m */,
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
 				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
 				4B451E8717F6339800A9F0BE /* Supporting Files */,
@@ -177,6 +187,8 @@
 				4B451E8D17F6339800A9F0BE /* main.m in Sources */,
 				4B451E9117F6339800A9F0BE /* FMAppDelegate.m in Sources */,
 				4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */,
+				04296B8117F6553700423497 /* FMCollection.m in Sources */,
+				04296B8517F655CE00423497 /* FMCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,7 @@
 				4B451EA217F6339800A9F0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

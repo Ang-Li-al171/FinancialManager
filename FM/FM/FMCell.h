@@ -1,5 +1,5 @@
 //
-//  FMTable.h
+//  FMCell.h
 //  FM
 //
 //  Created by  mac on 9/27/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FMTable : UIViewController
+@interface FMCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
 
 @end

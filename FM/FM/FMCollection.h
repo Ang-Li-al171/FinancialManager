@@ -1,5 +1,5 @@
 //
-//  FMTable.h
+//  FMCollection.h
 //  FM
 //
 //  Created by  mac on 9/27/13.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FMTable : UIViewController
+
+@interface FMCollection : UICollectionViewController
+
+@property (strong, nonatomic) NSArray *dataArray;
 
 @end
