@@ -11,6 +11,8 @@
 
 @interface FMCollection : UICollectionViewController
 
+@property (strong, nonatomic) NSArray *nameArray;
+
 @property (strong, nonatomic) NSArray *dataArray;
 
 @end

@@ -25,22 +25,42 @@
 }
 
 -(NSInteger) numberOfSectionsInCollectionView: (UICollectionView *) collectionView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.dataArray.count;
+    if (section == 0)
+        return self.nameArray.count;
+    if (section == 1)
+        return self.dataArray.count;
+    return 0;
 }
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     FMCell* aCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
-    aCell.myLabel.text = self.dataArray[indexPath.row];
+    if (indexPath.section == 1)
+        aCell.myLabel.text = self.dataArray[indexPath.row];
+    else if (indexPath.section == 0)
+        aCell.myLabel.text = self.nameArray[indexPath.row];
     return aCell;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.dataArray = @[@"apple",@"pear"];
+    
+    
+    self.nameArray = @[@"Linus", @"Max", @"Jack", @"Leslie", @"Rolland"];
+	self.dataArray = @[@"apple",@"pear",@"apple",@"pear",@"apple",@"pear",@"apple",@"pear",@"apple"];
+    
+    CGRect mainRect = [[UIScreen mainScreen] bounds];
+    CGFloat mainWidth = mainRect.size.width;
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    
+    flowLayout.minimumLineSpacing = 0;
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.itemSize = CGSizeMake(mainWidth/self.nameArray.count, mainWidth/10);
+    self.collectionView.collectionViewLayout = flowLayout;
 }
 
 - (void)didReceiveMemoryWarning
