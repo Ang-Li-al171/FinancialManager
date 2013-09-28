@@ -20,10 +20,23 @@
 @implementation FMViewController
 @synthesize myHomeTableView;
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
+    NSLog(@"did go here");
+    
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
     
@@ -31,7 +44,7 @@
     DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Spring Break 2013", nil];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToNewEventPage)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
@@ -90,9 +103,24 @@
 }
 
 //Add new cells
-- (void)insertNewObject {
+- (void)goToNewEventPage {
     [self performSegueWithIdentifier:@"EventCreater" sender:self];
+}
 
+- (void)insertNewObject {
+    if (!TitleLabel) {
+        TitleLabel = [[NSMutableArray alloc] init];
+    }
+    [TitleLabel insertObject:_myNewEventName atIndex:0];
+    
+    if (!DescriLabel) {
+        DescriLabel = [[NSMutableArray alloc] init];
+    }
+    [DescriLabel insertObject:_myNewEventMemo atIndex:0];
+    
+    //add to table view
+    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.myHomeTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -119,13 +147,5 @@
         [self.myHomeTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
-
-
-
-
-
-
-
-
 
 @end

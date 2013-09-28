@@ -22,6 +22,7 @@
 		4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451E9C17F6339800A9F0BE /* FMViewController.m */; };
 		4B451EA517F66C6A00A9F0BE /* CustomHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */; };
 		4B51D0F617F6A2480017C4D0 /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B51D0F517F6A2480017C4D0 /* pic.jpg */; };
+		4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		4B451EA317F66C6A00A9F0BE /* CustomHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHomeCell.h; sourceTree = "<group>"; };
 		4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHomeCell.m; sourceTree = "<group>"; };
 		4B51D0F517F6A2480017C4D0 /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
+		4B51D0FD17F6AE790017C4D0 /* NewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewEventViewController.h; path = ../NewEventViewController.h; sourceTree = "<group>"; };
+		4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventViewController.m; path = ../NewEventViewController.m; sourceTree = "<group>"; };
 		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +100,10 @@
 		4B451E8617F6339800A9F0BE /* FM */ = {
 			isa = PBXGroup;
 			children = (
+				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
+				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
+				4B51D0FD17F6AE790017C4D0 /* NewEventViewController.h */,
+				4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */,
 				4B451E8F17F6339800A9F0BE /* FMAppDelegate.h */,
 				4B451E9017F6339800A9F0BE /* FMAppDelegate.m */,
 				4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */,
@@ -104,9 +111,7 @@
 				04296B8417F655CE00423497 /* FMCell.m */,
 				04296B7F17F6553700423497 /* FMCollection.h */,
 				04296B8017F6553700423497 /* FMCollection.m */,
-				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
 				4B51D0F517F6A2480017C4D0 /* pic.jpg */,
-				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
 				4B451EA317F66C6A00A9F0BE /* CustomHomeCell.h */,
 				4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */,
 				4B451E8717F6339800A9F0BE /* Supporting Files */,
@@ -205,6 +210,7 @@
 				04296B8117F6553700423497 /* FMCollection.m in Sources */,
 				04296B8517F655CE00423497 /* FMCell.m in Sources */,
 				BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */,
+				4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

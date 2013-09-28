@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myHomeTableView;
 
+@property(nonatomic) NSString *myNewEventName;
+@property(nonatomic) NSString *myNewEventMemo;
 
+- (IBAction)insertNewObject;
 
 @end

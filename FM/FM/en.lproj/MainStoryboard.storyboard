@@ -4,36 +4,84 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - CreateEvent-->
+        <!--New Event View Controller - CreateEvent-->
         <scene sceneID="N8X-5J-m0m">
             <objects>
-                <viewController title="CreateEvent" id="DDf-xG-P7F" sceneMemberID="viewController">
+                <viewController title="CreateEvent" id="DDf-xG-P7F" customClass="NewEventViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcq-NE-bfz">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urF-Zl-BBd">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of Your Trip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-4k-cBu">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="356" id="7ta-IF-Ojc"/>
-                                    <constraint firstAttribute="height" constant="204" id="jcy-hU-1lw"/>
+                                    <constraint firstAttribute="height" constant="36" id="5fk-Ja-PlL"/>
+                                    <constraint firstAttribute="width" constant="162" id="b4w-vS-m8w"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-q5-oPU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="515" id="EaX-On-Plb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38U-cC-R6c">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zNn-Su-e1t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Memo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-7l-NfM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NiF-nv-28G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMF-IP-KsG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="Bwe-R6-jaE"/>
+                                    <constraint firstAttribute="height" constant="48" id="bxg-WI-5dt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Create Event!">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createNewEvent:" destination="DDf-xG-P7F" eventType="touchUpInside" id="OHd-sU-Qaj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94513895579999996" green="1" blue="0.79615486619999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="urF-Zl-BBd" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="199" id="ecm-Ub-Ta8"/>
-                            <constraint firstItem="urF-Zl-BBd" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="308" id="wtz-wL-u9N"/>
+                            <constraint firstItem="uMc-4k-cBu" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="75" id="Arr-xf-huV"/>
+                            <constraint firstItem="uMc-4k-cBu" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C9L-cC-axS"/>
+                            <constraint firstItem="38U-cC-R6c" firstAttribute="leading" secondItem="oJf-q5-oPU" secondAttribute="leading" type="default" id="Ccz-jo-9vH"/>
+                            <constraint firstItem="0FF-7l-NfM" firstAttribute="baseline" secondItem="38U-cC-R6c" secondAttribute="baseline" type="default" id="Lan-SB-Hjv"/>
+                            <constraint firstItem="hMF-IP-KsG" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="458" id="XZn-Zz-Qwa"/>
+                            <constraint firstItem="0FF-7l-NfM" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="146" id="arp-2k-WhD"/>
+                            <constraint firstItem="38U-cC-R6c" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="144" id="bBp-UA-N6X"/>
+                            <constraint firstItem="oJf-q5-oPU" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="219" id="bfD-gk-hNe"/>
+                            <constraint firstItem="0FF-7l-NfM" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dlH-Vn-Leb"/>
+                            <constraint firstItem="uMc-4k-cBu" firstAttribute="trailing" secondItem="0FF-7l-NfM" secondAttribute="trailing" type="default" id="jcE-Tn-YXO"/>
+                            <constraint firstItem="38U-cC-R6c" firstAttribute="trailing" secondItem="oJf-q5-oPU" secondAttribute="trailing" type="default" id="o1O-Vb-snT"/>
+                            <constraint firstItem="hMF-IP-KsG" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="192" id="txT-ft-eIx"/>
+                            <constraint firstItem="oJf-q5-oPU" firstAttribute="bottom" secondItem="uMc-4k-cBu" secondAttribute="bottom" type="default" id="wCZ-th-nL2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b92-Xx-n5f"/>
+                    <navigationItem key="navigationItem" title="Create Your Trip!" id="b92-Xx-n5f"/>
+                    <connections>
+                        <outlet property="createNewEventView" destination="wcq-NE-bfz" id="df7-HF-i8u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38l-DI-u0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,6 +97,21 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-Yz-Tcr">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jHM-eH-kx8">
+                                    <rect key="frame" x="0.0" y="125" width="768" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="K9P-d2-AtW" kind="push" id="jAg-sD-1xQ"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="uSM-fa-PEL" customClass="CustomHomeCell">
                                         <rect key="frame" x="0.0" y="22" width="768" height="103"/>
