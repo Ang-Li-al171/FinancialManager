@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FMViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *tryOut;
-- (IBAction)nextPage:(id)sender;
+@interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *myHomeTableView;
+
+
 
 @end

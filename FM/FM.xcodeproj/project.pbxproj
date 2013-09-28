@@ -18,6 +18,8 @@
 		4B451E9717F6339800A9F0BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B451E9617F6339800A9F0BE /* Default-568h@2x.png */; };
 		4B451E9A17F6339800A9F0BE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */; };
 		4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451E9C17F6339800A9F0BE /* FMViewController.m */; };
+		4B451EA517F66C6A00A9F0BE /* CustomHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */; };
+		4B451EA717F675A300A9F0BE /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B451EA617F675A300A9F0BE /* pic.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		4B451E9917F6339800A9F0BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4B451E9B17F6339800A9F0BE /* FMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
 		4B451E9C17F6339800A9F0BE /* FMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		4B451EA317F66C6A00A9F0BE /* CustomHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHomeCell.h; sourceTree = "<group>"; };
+		4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHomeCell.m; sourceTree = "<group>"; };
+		4B451EA617F675A300A9F0BE /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pic.jpg; path = ../../../../pic.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 				4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */,
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
 				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
+				4B451EA317F66C6A00A9F0BE /* CustomHomeCell.h */,
+				4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */,
+				4B451EA617F675A300A9F0BE /* pic.jpg */,
 				4B451E8717F6339800A9F0BE /* Supporting Files */,
 			);
 			path = FM;
@@ -164,6 +172,7 @@
 				4B451E9517F6339800A9F0BE /* Default@2x.png in Resources */,
 				4B451E9717F6339800A9F0BE /* Default-568h@2x.png in Resources */,
 				4B451E9A17F6339800A9F0BE /* MainStoryboard.storyboard in Resources */,
+				4B451EA717F675A300A9F0BE /* pic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				4B451E8D17F6339800A9F0BE /* main.m in Sources */,
 				4B451E9117F6339800A9F0BE /* FMAppDelegate.m in Sources */,
 				4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */,
+				4B451EA517F66C6A00A9F0BE /* CustomHomeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
