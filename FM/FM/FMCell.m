@@ -7,8 +7,10 @@
 //
 
 #import "FMCell.h"
-
+ 
 @implementation FMCell
+
+@synthesize myLabel;
 
 - (id)initWithFrame:(CGRect)frame
 {

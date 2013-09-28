@@ -68,8 +68,8 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cell 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhP-Oa-tVi">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="39" id="OAi-Mj-Lc6"/>
-                                                <constraint firstAttribute="width" constant="70" id="WFj-ep-UjO"/>
+                                                <constraint firstAttribute="height" constant="28" id="K7y-GC-3n8"/>
+                                                <constraint firstAttribute="width" constant="46" id="W3K-9z-LdW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -80,8 +80,8 @@
                                 </view>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="vhP-Oa-tVi" firstAttribute="centerY" secondItem="dfh-2G-7XV" secondAttribute="centerY" type="default" id="97x-He-Vns"/>
-                                    <constraint firstItem="vhP-Oa-tVi" firstAttribute="centerX" secondItem="dfh-2G-7XV" secondAttribute="centerX" type="default" id="q8y-6f-YRo"/>
+                                    <constraint firstItem="vhP-Oa-tVi" firstAttribute="centerY" secondItem="dfh-2G-7XV" secondAttribute="centerY" type="default" id="CQt-zW-l4y"/>
+                                    <constraint firstItem="vhP-Oa-tVi" firstAttribute="centerX" secondItem="dfh-2G-7XV" secondAttribute="centerX" type="default" id="n20-UI-DDh"/>
                                 </constraints>
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
@@ -95,9 +95,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="K9V-aL-RAS"/>
-                    <connections>
-                        <outlet property="myLabel" destination="vhP-Oa-tVi" id="obs-h1-Jz2"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56h-9c-WpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
