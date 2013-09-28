@@ -42,6 +42,7 @@
     
     TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Porto Rico", @"San Diego", nil];
     DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Spring Break 2013", nil];
+    _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToNewEventPage)];
@@ -75,7 +76,9 @@
     
     Cell.TitleLabel.text = [TitleLabel objectAtIndex:indexPath.row];
     Cell.DescriLabel.text = [DescriLabel objectAtIndex:indexPath.row];
-    Cell.imageView.image = [UIImage imageNamed:@"pic.jpg"];
+
+    Cell.imageView.image = _image;
+    _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
     return Cell;
 }
@@ -123,29 +126,5 @@
     [self.myHomeTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    //TO BE REVISED
-    
-    if (buttonIndex == 1) { //refer to OK button
-        //get String
-        NSString * tmpTextField = [alertView textFieldAtIndex:0].text;
-        
-        //insert String to Mutable Array
-        if (!TitleLabel) {
-            TitleLabel = [[NSMutableArray alloc] init];
-        }
-        [TitleLabel insertObject:tmpTextField atIndex:0];
-                //better at 0. Mutable array will then shift everything forward 1
-        
-        if (!DescriLabel) {
-            DescriLabel = [[NSMutableArray alloc] init];
-        }
-        [DescriLabel insertObject:@"place holder" atIndex:0];
-        
-        //add to table view
-        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.myHomeTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
 
 @end

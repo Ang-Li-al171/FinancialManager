@@ -9,7 +9,7 @@
             <objects>
                 <viewController title="CreateEvent" id="DDf-xG-P7F" customClass="NewEventViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcq-NE-bfz">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of Your Trip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-4k-cBu">
@@ -35,10 +35,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-7o-oxT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xFb-Z7-F9f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Memo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-7l-NfM">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NiF-nv-28G"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Members" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc4-d9-amy">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,24 +75,43 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94513895579999996" green="1" blue="0.79615486619999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uMc-4k-cBu" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="75" id="Arr-xf-huV"/>
+                            <constraint firstItem="Oc4-d9-amy" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8fv-bJ-ACh"/>
+                            <constraint firstItem="ixP-7o-oxT" firstAttribute="trailing" secondItem="38U-cC-R6c" secondAttribute="trailing" type="default" id="BWv-h4-BrX"/>
                             <constraint firstItem="uMc-4k-cBu" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C9L-cC-axS"/>
                             <constraint firstItem="38U-cC-R6c" firstAttribute="leading" secondItem="oJf-q5-oPU" secondAttribute="leading" type="default" id="Ccz-jo-9vH"/>
                             <constraint firstItem="0FF-7l-NfM" firstAttribute="baseline" secondItem="38U-cC-R6c" secondAttribute="baseline" type="default" id="Lan-SB-Hjv"/>
-                            <constraint firstItem="hMF-IP-KsG" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="458" id="XZn-Zz-Qwa"/>
-                            <constraint firstItem="0FF-7l-NfM" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="146" id="arp-2k-WhD"/>
-                            <constraint firstItem="38U-cC-R6c" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="144" id="bBp-UA-N6X"/>
+                            <constraint firstAttribute="bottom" secondItem="hMF-IP-KsG" secondAttribute="bottom" constant="281" id="SlY-h2-FFe"/>
+                            <constraint firstItem="ixP-7o-oxT" firstAttribute="baseline" secondItem="Oc4-d9-amy" secondAttribute="baseline" type="default" id="Yc9-yj-dZP"/>
                             <constraint firstItem="oJf-q5-oPU" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="219" id="bfD-gk-hNe"/>
+                            <constraint firstItem="0FF-7l-NfM" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="139" id="bg3-e8-KFp"/>
+                            <constraint firstItem="hMF-IP-KsG" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="209" id="dTW-O1-Dya"/>
                             <constraint firstItem="0FF-7l-NfM" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dlH-Vn-Leb"/>
+                            <constraint firstItem="Oc4-d9-amy" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="197" id="eC3-Ka-teM"/>
+                            <constraint firstItem="ixP-7o-oxT" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="193" id="gpB-Dc-h9X"/>
+                            <constraint firstItem="ixP-7o-oxT" firstAttribute="leading" secondItem="38U-cC-R6c" secondAttribute="leading" type="default" id="i8m-d6-goS"/>
+                            <constraint firstItem="uMc-4k-cBu" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="71" id="iDm-bS-yOe"/>
                             <constraint firstItem="uMc-4k-cBu" firstAttribute="trailing" secondItem="0FF-7l-NfM" secondAttribute="trailing" type="default" id="jcE-Tn-YXO"/>
+                            <constraint firstItem="38U-cC-R6c" firstAttribute="top" secondItem="wcq-NE-bfz" secondAttribute="top" constant="137" id="nK5-o2-9rf"/>
                             <constraint firstItem="38U-cC-R6c" firstAttribute="trailing" secondItem="oJf-q5-oPU" secondAttribute="trailing" type="default" id="o1O-Vb-snT"/>
-                            <constraint firstItem="hMF-IP-KsG" firstAttribute="leading" secondItem="wcq-NE-bfz" secondAttribute="leading" constant="192" id="txT-ft-eIx"/>
                             <constraint firstItem="oJf-q5-oPU" firstAttribute="bottom" secondItem="uMc-4k-cBu" secondAttribute="bottom" type="default" id="wCZ-th-nL2"/>
+                            <constraint firstItem="Oc4-d9-amy" firstAttribute="trailing" secondItem="0FF-7l-NfM" secondAttribute="trailing" type="default" id="wgk-61-nRH"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Add Cover Photo" id="irQ-iE-ikf">
+                            <connections>
+                                <action selector="chooseExistingBarButton:" destination="DDf-xG-P7F" id="8xL-Va-Smq"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Create Your Trip!" id="b92-Xx-n5f"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
                     <connections>
                         <outlet property="createNewEventView" destination="wcq-NE-bfz" id="df7-HF-i8u"/>
+                        <outlet property="memberText" destination="ixP-7o-oxT" id="lm8-ng-cd0"/>
+                        <outlet property="memoText" destination="38U-cC-R6c" id="Alp-Qg-OYJ"/>
+                        <outlet property="nameText" destination="oJf-q5-oPU" id="zT1-Ge-gJ4"/>
+                        <outlet property="photoLibraryBarButton" destination="irQ-iE-ikf" id="C7H-ap-l0w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38l-DI-u0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,7 +123,7 @@
             <objects>
                 <viewController title="Events" id="2" customClass="FMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-Yz-Tcr">
@@ -185,7 +216,7 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="K9P-d2-AtW" customClass="FMCollection" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="sLA-9N-Y2h">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.72811982919318563" green="0.76695702241695063" blue="0.86311453579999997" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7ml-wx-dSC">
@@ -225,7 +256,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myButton" id="EQT-Zb-2Kj" customClass="IconButton">
-                                <rect key="frame" x="201.66667175292969" y="40" width="163" height="48"/>
+                                <rect key="frame" x="202" y="40" width="163" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="163" height="48"/>
@@ -273,14 +304,19 @@
         <!--Navigation Controller - Controller-->
         <scene sceneID="Ysz-hs-xk3">
             <objects>
-                <navigationController title="Controller" id="M8v-lG-0TS" sceneMemberID="viewController">
+                <navigationController title="Controller" toolbarHidden="NO" id="M8v-lG-0TS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="l07-Yk-duf">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="cWc-2A-bB4">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="eez-De-LX6"/>
                     </connections>

@@ -10,7 +10,7 @@
 #import "FMViewController.h"
 
 @interface NewEventViewController ()
-
+    
 @end
 
 @implementation NewEventViewController
@@ -27,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,17 +35,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)chooseExistingBarButton:(id)sender {
+    UIImagePickerController *pickerLibrary = [[UIImagePickerController alloc] init];
+    [pickerLibrary setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    pickerLibrary.delegate = self;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:pickerLibrary];
+        
+        [popover presentPopoverFromBarButtonItem: self.photoLibraryBarButton permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+        
+        self.popOver = popover;
+    } else {
+        [self presentViewController:pickerLibrary animated:YES completion:NULL];
+    }
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
 - (IBAction)createNewEvent:(id)sender {
     FMViewController *rootViewController = [self.navigationController.viewControllers objectAtIndex:0];
     
+    rootViewController.myNewEventName = _nameText.text;
+    rootViewController.myNewEventMemo = _memoText.text;
+    rootViewController.myNewEventMember = _memberText.text;
     
-    //[[FMViewController alloc]initWithNibName:@"rootViewController" bundle:nil];
-    
-    rootViewController.myNewEventName = @"TESTING";
-    rootViewController.myNewEventMemo = @"Still Testing";
+    if (!image){
+        image = [UIImage imageNamed:@"defaultEventPic.png"];
+    }
+    rootViewController.image = image;
     [rootViewController insertNewObject];
-    
-    //[self.navigationController popToViewController:rootViewController.navigationController animated:YES];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
