@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		04296B8117F6553700423497 /* FMCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04296B8017F6553700423497 /* FMCollection.m */; };
 		04296B8517F655CE00423497 /* FMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04296B8417F655CE00423497 /* FMCell.m */; };
+		0462F8CA17F78838005FE399 /* FMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8C917F78838005FE399 /* FMTrip.m */; };
+		0462F8CD17F788C2005FE399 /* FMPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8CC17F788C2005FE399 /* FMPair.m */; };
+		0462F8D017F78A38005FE399 /* FMBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8CF17F78A38005FE399 /* FMBrain.m */; };
 		4B451E8117F6339800A9F0BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8017F6339800A9F0BE /* UIKit.framework */; };
 		4B451E8317F6339800A9F0BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8217F6339800A9F0BE /* Foundation.framework */; };
 		4B451E8517F6339800A9F0BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8417F6339800A9F0BE /* CoreGraphics.framework */; };
@@ -34,6 +37,12 @@
 		04296B8017F6553700423497 /* FMCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCollection.m; sourceTree = "<group>"; };
 		04296B8317F655CE00423497 /* FMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCell.h; sourceTree = "<group>"; };
 		04296B8417F655CE00423497 /* FMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCell.m; sourceTree = "<group>"; };
+		0462F8C817F78838005FE399 /* FMTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTrip.h; sourceTree = "<group>"; };
+		0462F8C917F78838005FE399 /* FMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTrip.m; sourceTree = "<group>"; };
+		0462F8CB17F788C1005FE399 /* FMPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
+		0462F8CC17F788C2005FE399 /* FMPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
+		0462F8CE17F78A38005FE399 /* FMBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBrain.h; sourceTree = "<group>"; };
+		0462F8CF17F78A38005FE399 /* FMBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBrain.m; sourceTree = "<group>"; };
 		4B451E7D17F6339800A9F0BE /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B451E8017F6339800A9F0BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B451E8217F6339800A9F0BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0462F8C417F787BF005FE399 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0462F8C817F78838005FE399 /* FMTrip.h */,
+				0462F8C917F78838005FE399 /* FMTrip.m */,
+				0462F8CB17F788C1005FE399 /* FMPair.h */,
+				0462F8CC17F788C2005FE399 /* FMPair.m */,
+				0462F8CE17F78A38005FE399 /* FMBrain.h */,
+				0462F8CF17F78A38005FE399 /* FMBrain.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4B451E7417F6339800A9F0BE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +129,7 @@
 		4B451E8617F6339800A9F0BE /* FM */ = {
 			isa = PBXGroup;
 			children = (
+				0462F8C417F787BF005FE399 /* Model */,
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
 				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
 				4B51D0FD17F6AE790017C4D0 /* NewEventViewController.h */,
@@ -225,6 +248,9 @@
 				BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */,
 				4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */,
 				BCCC258017F74CE500531A9E /* TransController.m in Sources */,
+				0462F8CA17F78838005FE399 /* FMTrip.m in Sources */,
+				0462F8CD17F788C2005FE399 /* FMPair.m in Sources */,
+				0462F8D017F78A38005FE399 /* FMBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
