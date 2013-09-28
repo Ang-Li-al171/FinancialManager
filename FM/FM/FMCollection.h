@@ -15,4 +15,8 @@
 
 @property (strong, nonatomic) NSArray *dataArray;
 
+@property NSInteger numItems;
+
+@property (strong, nonatomic) NSArray *transArray;
+
 @end

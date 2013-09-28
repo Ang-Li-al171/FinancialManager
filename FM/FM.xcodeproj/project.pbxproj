@@ -20,6 +20,7 @@
 		4B451E9717F6339800A9F0BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B451E9617F6339800A9F0BE /* Default-568h@2x.png */; };
 		4B451E9A17F6339800A9F0BE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */; };
 		4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451E9C17F6339800A9F0BE /* FMViewController.m */; };
+		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		4B451E9917F6339800A9F0BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4B451E9B17F6339800A9F0BE /* FMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
 		4B451E9C17F6339800A9F0BE /* FMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
+		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
 				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
 				4B451E8717F6339800A9F0BE /* Supporting Files */,
+				BC7B46A317F6804D00DD5244 /* IconButton.h */,
+				BC7B46A417F6804D00DD5244 /* IconButton.m */,
 			);
 			path = FM;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */,
 				04296B8117F6553700423497 /* FMCollection.m in Sources */,
 				04296B8517F655CE00423497 /* FMCell.m in Sources */,
+				BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
