@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		04296B8117F6553700423497 /* FMCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04296B8017F6553700423497 /* FMCollection.m */; };
 		04296B8517F655CE00423497 /* FMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04296B8417F655CE00423497 /* FMCell.m */; };
-		0462F8CA17F78838005FE399 /* FMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8C917F78838005FE399 /* FMTrip.m */; };
-		0462F8CD17F788C2005FE399 /* FMPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8CC17F788C2005FE399 /* FMPair.m */; };
-		0462F8D017F78A38005FE399 /* FMBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8CF17F78A38005FE399 /* FMBrain.m */; };
 		4B451E8117F6339800A9F0BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8017F6339800A9F0BE /* UIKit.framework */; };
 		4B451E8317F6339800A9F0BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8217F6339800A9F0BE /* Foundation.framework */; };
 		4B451E8517F6339800A9F0BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8417F6339800A9F0BE /* CoreGraphics.framework */; };
@@ -30,6 +27,12 @@
 		4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2217F763ED0070792E /* defaultEventPic.png */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 		BCCC258017F74CE500531A9E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC257F17F74CE500531A9E /* TransController.m */; };
+		BCCC258317F76E0700531A9E /* CollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC258217F76E0700531A9E /* CollectionFlowLayout.m */; };
+		BCCC258917F7760800531A9E /* restaurant_icon_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258417F7760700531A9E /* restaurant_icon_6060.png */; };
+		BCCC258A17F7760800531A9E /* icon-attraction_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258517F7760800531A9E /* icon-attraction_6060.png */; };
+		BCCC258B17F7760800531A9E /* Hotel Icon black_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258617F7760800531A9E /* Hotel Icon black_6060.png */; };
+		BCCC258C17F7760800531A9E /* transaction_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258717F7760800531A9E /* transaction_6060.png */; };
+		BCCC258D17F7760800531A9E /* shopping_cart_icon_6060.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +40,12 @@
 		04296B8017F6553700423497 /* FMCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCollection.m; sourceTree = "<group>"; };
 		04296B8317F655CE00423497 /* FMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCell.h; sourceTree = "<group>"; };
 		04296B8417F655CE00423497 /* FMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCell.m; sourceTree = "<group>"; };
-		0462F8C817F78838005FE399 /* FMTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTrip.h; sourceTree = "<group>"; };
-		0462F8C917F78838005FE399 /* FMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTrip.m; sourceTree = "<group>"; };
-		0462F8CB17F788C1005FE399 /* FMPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
-		0462F8CC17F788C2005FE399 /* FMPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
-		0462F8CE17F78A38005FE399 /* FMBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBrain.h; sourceTree = "<group>"; };
-		0462F8CF17F78A38005FE399 /* FMBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBrain.m; sourceTree = "<group>"; };
+		0462F8DB17F792B4005FE399 /* FMPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
+		0462F8DC17F792B4005FE399 /* FMPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
+		0462F8DD17F792C6005FE399 /* FMBrain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBrain.h; sourceTree = "<group>"; };
+		0462F8DE17F792C6005FE399 /* FMBrain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBrain.m; sourceTree = "<group>"; };
+		0462F8DF17F792EF005FE399 /* FMPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
+		0462F8E017F792EF005FE399 /* FMPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
 		4B451E7D17F6339800A9F0BE /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B451E8017F6339800A9F0BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B451E8217F6339800A9F0BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +73,13 @@
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 		BCCC257E17F74CE500531A9E /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
 		BCCC257F17F74CE500531A9E /* TransController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
+		BCCC258117F76E0700531A9E /* CollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionFlowLayout.h; sourceTree = "<group>"; };
+		BCCC258217F76E0700531A9E /* CollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionFlowLayout.m; sourceTree = "<group>"; };
+		BCCC258417F7760700531A9E /* restaurant_icon_6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant_icon_6060.png; sourceTree = "<group>"; };
+		BCCC258517F7760800531A9E /* icon-attraction_6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-attraction_6060.png"; sourceTree = "<group>"; };
+		BCCC258617F7760800531A9E /* Hotel Icon black_6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hotel Icon black_6060.png"; sourceTree = "<group>"; };
+		BCCC258717F7760800531A9E /* transaction_6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transaction_6060.png; sourceTree = "<group>"; };
+		BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopping_cart_icon_6060.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0462F8C417F787BF005FE399 /* Model */ = {
+		0462F8D917F79291005FE399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0462F8C817F78838005FE399 /* FMTrip.h */,
-				0462F8C917F78838005FE399 /* FMTrip.m */,
-				0462F8CB17F788C1005FE399 /* FMPair.h */,
-				0462F8CC17F788C2005FE399 /* FMPair.m */,
-				0462F8CE17F78A38005FE399 /* FMBrain.h */,
-				0462F8CF17F78A38005FE399 /* FMBrain.m */,
+				0462F8DF17F792EF005FE399 /* FMPair.h */,
+				0462F8E017F792EF005FE399 /* FMPair.m */,
+				0462F8DD17F792C6005FE399 /* FMBrain.h */,
+				0462F8DE17F792C6005FE399 /* FMBrain.m */,
+				0462F8DB17F792B4005FE399 /* FMPair.h */,
+				0462F8DC17F792B4005FE399 /* FMPair.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,7 +139,12 @@
 		4B451E8617F6339800A9F0BE /* FM */ = {
 			isa = PBXGroup;
 			children = (
-				0462F8C417F787BF005FE399 /* Model */,
+				0462F8D917F79291005FE399 /* Model */,
+				BCCC258417F7760700531A9E /* restaurant_icon_6060.png */,
+				BCCC258517F7760800531A9E /* icon-attraction_6060.png */,
+				BCCC258617F7760800531A9E /* Hotel Icon black_6060.png */,
+				BCCC258717F7760800531A9E /* transaction_6060.png */,
+				BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */,
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
 				4B451E9C17F6339800A9F0BE /* FMViewController.m */,
 				4B51D0FD17F6AE790017C4D0 /* NewEventViewController.h */,
@@ -151,6 +166,8 @@
 				BC7B46A417F6804D00DD5244 /* IconButton.m */,
 				BCCC257E17F74CE500531A9E /* TransController.h */,
 				BCCC257F17F74CE500531A9E /* TransController.m */,
+				BCCC258117F76E0700531A9E /* CollectionFlowLayout.h */,
+				BCCC258217F76E0700531A9E /* CollectionFlowLayout.m */,
 			);
 			path = FM;
 			sourceTree = "<group>";
@@ -227,6 +244,11 @@
 				4B451E9717F6339800A9F0BE /* Default-568h@2x.png in Resources */,
 				4B451E9A17F6339800A9F0BE /* MainStoryboard.storyboard in Resources */,
 				4B51D0F617F6A2480017C4D0 /* pic.jpg in Resources */,
+				BCCC258917F7760800531A9E /* restaurant_icon_6060.png in Resources */,
+				BCCC258A17F7760800531A9E /* icon-attraction_6060.png in Resources */,
+				BCCC258B17F7760800531A9E /* Hotel Icon black_6060.png in Resources */,
+				BCCC258C17F7760800531A9E /* transaction_6060.png in Resources */,
+				BCCC258D17F7760800531A9E /* shopping_cart_icon_6060.jpg in Resources */,
 				4B607D2117F761580070792E /* defaultPic.jpg in Resources */,
 				4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */,
 			);
@@ -248,9 +270,7 @@
 				BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */,
 				4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */,
 				BCCC258017F74CE500531A9E /* TransController.m in Sources */,
-				0462F8CA17F78838005FE399 /* FMTrip.m in Sources */,
-				0462F8CD17F788C2005FE399 /* FMPair.m in Sources */,
-				0462F8D017F78A38005FE399 /* FMBrain.m in Sources */,
+				BCCC258317F76E0700531A9E /* CollectionFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

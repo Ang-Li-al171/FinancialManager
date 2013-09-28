@@ -8,11 +8,13 @@
 
 #import "FMViewController.h"
 #import "CustomHomeCell.h"
+#import "FMCollection.h"
 
 @interface FMViewController ()
 {
     NSMutableArray *TitleLabel;
     NSMutableArray *DescriLabel;
+    NSMutableArray *TransactionPage;
 }
 
 @end
@@ -43,6 +45,14 @@
     TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Porto Rico", @"San Diego", nil];
     DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Spring Break 2013", nil];
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
+    
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    FMCollection *fm = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
+    FMCollection *fmTwo = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
+    
+    //FMCollection *transaction = [[FMCollection alloc] initWithNibName:nil bundle:nil];
+    TransactionPage = [[NSMutableArray alloc] initWithObjects:fm, fmTwo, nil];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToNewEventPage)];
@@ -99,6 +109,7 @@
         
         [TitleLabel removeObjectAtIndex:indexPath.row];
         [DescriLabel removeObjectAtIndex:indexPath.row];
+        [TransactionPage removeObjectAtIndex:indexPath.row];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -121,10 +132,23 @@
     }
     [DescriLabel insertObject:_myNewEventMemo atIndex:0];
     
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    FMCollection *fm = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
+    [TransactionPage insertObject:fm atIndex:0];
+    
     //add to table view
     NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.myHomeTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+//go to transaction page
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"index path: %d", indexPath.row);
+    FMCollection* page = [TransactionPage objectAtIndex:indexPath.row];
+    NSLog(@"array size: %d", TransactionPage.count);
+    [self.navigationController pushViewController:page animated:YES];
+}
 
 @end
