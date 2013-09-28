@@ -22,6 +22,7 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -53,11 +54,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.nameArray = @[@"Linus", @"Max", @"Jack", @"Leslie", @"Rolland"];
-	self.dataArray = @[@"100/20",@"100/20",@" ",@"100/20",@"0/0",@"100/20",@"100/20",@" ",@"0/20"
-                    ,@"0/20",@"0/20",@"0/20",@"0/20",@"0/0", @"0/0"];
-    self.transArray = @[@" ", @"Trans1", @"Trans2", @"Trans3", @"Total"];
+    self.nameArray = [[NSMutableArray alloc] init];
+    [self.nameArray insertObject:@"Linus" atIndex:0];
+    [self.nameArray insertObject:@"Max" atIndex:0];
+    [self.nameArray insertObject:@"Jack" atIndex:0];
+    [self.nameArray insertObject:@"Leslie" atIndex:0];
+    [self.nameArray insertObject:@"Rolland" atIndex:0];
+    self.dataArray = [[NSMutableArray alloc] init];
+    [self.dataArray insertObject:@"100/-20" atIndex:0];
+    [self.dataArray insertObject:@"1/-20" atIndex:0];
+    [self.dataArray insertObject:@"0/-20" atIndex:0];
+    [self.dataArray insertObject:@"-1/-20" atIndex:0];
+    [self.dataArray insertObject:@"0/-20" atIndex:0];
+    [self.dataArray insertObject:@"100/-100" atIndex:0];
+    [self.dataArray insertObject:@"100/-100" atIndex:0];
+    [self.dataArray insertObject:@"100/0" atIndex:0];
+    [self.dataArray insertObject:@"100/-200" atIndex:0];
+    [self.dataArray insertObject:@"100/-100" atIndex:0];
+    self.transArray = [[NSMutableArray alloc] init];
+    [self.transArray insertObject:@"Total" atIndex:0];
+    [self.transArray insertObject:@"Trans2" atIndex:0];
+    [self.transArray insertObject:@"Trans1" atIndex:0];
+    [self.transArray insertObject:@"Empty" atIndex:0];
     self.numItems = self.transArray.count-1;
     
     CGRect mainRect = [[UIScreen mainScreen] bounds];
@@ -75,6 +93,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) createNewObj
+{
+    NSLog(@"Did go to createNewObj");
+    [self.transArray insertObject:self.myNewTransName atIndex:0];
+    
+    [self.collectionView reloadData];
+    
 }
 
 @end
