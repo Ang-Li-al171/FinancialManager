@@ -10,7 +10,7 @@
 #import "FMTrip.h"
 #import "FMPair.h"
 
-@interface Trip : NSObject
+@interface FMTrip : NSObject
 
 @property NSString * description;
 @property NSMutableArray *peoples;
@@ -21,6 +21,7 @@
 -(id) initWithName: (NSString*) n;
 -(id) initWithName: (NSString*) n WithDescription: (NSString*) d;
 -(void) addPeople: (NSString*) peopleName;
+-(void) addPeoples: (NSString*) peopleNames;
 -(void) addEvent:(NSString*) eventName;
 -(NSMutableArray*) getEventArray;
 -(NSMutableArray*) getNameEntrys;

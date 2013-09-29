@@ -9,7 +9,7 @@
 #import "FMTrip.h"
 #import "FMPair.h"
 
-@implementation Trip
+@implementation FMTrip
 
 @synthesize peoples, events, name, budgetTable, description;
 
@@ -31,6 +31,13 @@
     [peoples addObject:peopleName];
     for (NSMutableArray *e in budgetTable) {
         [e addObject: [[FMPair alloc ]init]];
+    }
+}
+
+-(void) addPeoples: (NSString*) peopleNames{
+    NSArray *names = [peopleNames componentsSeparatedByString:@","];
+    for (NSString* n in names) {
+        [self addPeople:n];
     }
 }
 
