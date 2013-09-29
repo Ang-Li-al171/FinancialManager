@@ -49,6 +49,7 @@
 		BCCC258C17F7760800531A9E /* transaction_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258717F7760800531A9E /* transaction_6060.png */; };
 		BCCC258D17F7760800531A9E /* shopping_cart_icon_6060.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */; };
 		BCCC259017F803F600531A9E /* menuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC258F17F803F500531A9E /* menuButton.m */; };
+		BCD4807E17F8C859007BEE41 /* transBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD4807D17F8C858007BEE41 /* transBG.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopping_cart_icon_6060.jpg; sourceTree = "<group>"; };
 		BCCC258E17F803F500531A9E /* menuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuButton.h; sourceTree = "<group>"; };
 		BCCC258F17F803F500531A9E /* menuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuButton.m; sourceTree = "<group>"; };
+		BCD4807D17F8C858007BEE41 /* transBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = transBG.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		4B451E8617F6339800A9F0BE /* FM */ = {
 			isa = PBXGroup;
 			children = (
+				BCD4807D17F8C858007BEE41 /* transBG.jpg */,
 				BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */,
 				4B451E8F17F6339800A9F0BE /* FMAppDelegate.h */,
 				4B451E9017F6339800A9F0BE /* FMAppDelegate.m */,
@@ -310,6 +313,7 @@
 				4B9CC46A17F8996D0094DBAF /* mic.png in Resources */,
 				4B9CC46C17F8A4390094DBAF /* bigbytelogo.png in Resources */,
 				BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */,
+				BCD4807E17F8C859007BEE41 /* transBG.jpg in Resources */,
 				4B05DBA317F8CAD5002B2847 /* CreateLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

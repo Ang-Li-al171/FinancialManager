@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"transBG.jpg"]];
     
     self.catePicker.delegate = self;
     self.catePicker.dataSource = self;
@@ -40,10 +41,14 @@
     
     for(int i = 0; i < self.myPeoples.count; i++){
         UILabel *label =  [[UILabel alloc] initWithFrame:
-                           CGRectMake(185, 380+350*i/self.myPeoples.count, 140, 21)];
+                           CGRectMake(100, 380+350*i/self.myPeoples.count, 140, 30)];
         label.text = [self.myPeoples objectAtIndex:i];
         label.textAlignment = NSTextAlignmentCenter;
-        label.shadowColor = [UIColor grayColor];
+        label.shadowColor = [UIColor clearColor];
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [UIColor blackColor];
+        UIFont *futuraFont = [UIFont fontWithName:@"futura" size:18.0];
+        label.font = futuraFont;
         [self.view addSubview:label];
     }
     
@@ -51,18 +56,18 @@
     self.myShouldPayFields = [[NSMutableArray alloc] init];
     for(int i = 0; i < self.myPeoples.count; i++){
         UITextField *textIn =  [[UITextField alloc] initWithFrame:
-                                CGRectMake(370, 380+350*i/self.myPeoples.count, 150, 21)];
-        textIn.backgroundColor = [UIColor grayColor];
-        textIn.textColor = [UIColor whiteColor];
+                                CGRectMake(300, 380+350*i/self.myPeoples.count, 150, 30)];
+        textIn.backgroundColor = [UIColor whiteColor];
+        textIn.textColor = [UIColor blackColor];
         textIn.textAlignment = UITextAlignmentCenter;
         [textIn setBorderStyle:UITextBorderStyleRoundedRect];
         [self.view addSubview:textIn];
         [self.myTextFields addObject:textIn];
         
         UITextField *textShouldPay =  [[UITextField alloc] initWithFrame:
-                                CGRectMake(540, 380+350*i/self.myPeoples.count, 150, 21)];
-        textShouldPay.backgroundColor = [UIColor grayColor];
-        textShouldPay.textColor = [UIColor whiteColor];
+                                CGRectMake(500, 380+350*i/self.myPeoples.count, 150, 30)];
+        textShouldPay.backgroundColor = [UIColor whiteColor];
+        textShouldPay.textColor = [UIColor blackColor];
         textShouldPay.textAlignment = UITextAlignmentCenter;
         [textShouldPay setBorderStyle:UITextBorderStyleRoundedRect];
         [self.view addSubview:textShouldPay];
