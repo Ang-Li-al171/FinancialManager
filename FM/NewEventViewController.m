@@ -11,6 +11,7 @@
 #import "ATTSpeechKit.h"
 #import "SpeechConfig.h"
 #import "SpeechAuth.h"
+#import "FMTrip.h"
 
 @interface NewEventViewController () {
     NSString *CurrentButton;

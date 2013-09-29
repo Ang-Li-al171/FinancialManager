@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMTrip.h"
-#import "FMPair.h"
-#import "FMBrain.h"
 
+@class FMBrain;
 @interface FMTrip : NSObject
 
 @property NSString * description;

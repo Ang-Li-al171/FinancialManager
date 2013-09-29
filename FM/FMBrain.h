@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "FMTrip.h"
-
+@class FMTrip;
 @interface FMBrain : NSObject
 
 @property NSMutableArray *trips;

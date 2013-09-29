@@ -8,8 +8,6 @@
 
 #import "FMPair.h"
 
-#import "FMPair.h"
-
 @implementation FMPair
 
 @synthesize paid,shouldPay;
