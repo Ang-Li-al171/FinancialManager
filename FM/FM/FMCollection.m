@@ -70,7 +70,7 @@
         if (indexPath.row < self.numItems && indexPath.row > 0)
             picNum = [self switchCate:[[self.myTrip getEventArray] objectAtIndex:indexPath.row-1]];
         [aCell.myButton setImage:self.PICArray[picNum] forState:UIControlStateNormal];
-        [aCell.myButton setBackgroundColor:[UIColor whiteColor]];
+        [aCell.myButton setBackgroundColor:[UIColor underPageBackgroundColor]];
         
         if (0 < indexPath.row && indexPath.row < self.numItems){
             
@@ -79,6 +79,7 @@
             [lastaddedButton setMyRowNum:indexPath.row];
             [lastaddedButton addTarget:self action:@selector(pressTransButton:) forControlEvents:UIControlEventTouchDown];
         }
+        aCell.backgroundColor = [UIColor clearColor];
         return aCell;
     }
     else{
@@ -98,6 +99,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"collectionBG.jpg"]];
+    self.naviBarCollection.title = [NSString stringWithFormat:@"%@%@", @"Transactions: ", self.myTrip.name];
     
     self.DEFAULT_TRANS_PIC = [UIImage imageNamed:@"transaction_6060.png"];
     self.DINING = [UIImage imageNamed:@"restaurant_icon_6060.png"];
@@ -125,10 +129,11 @@
     [self.collectionView reloadData];
 }
 
+//brings to the details page
 - (void)pressTransButton:(id)sender{
     menuButton *myself = (menuButton *) sender;
-    //NSLog(@"there are %d buttons in total, %d controllers", self.myTransButtons.count, self.myTransControllers.count);
     TransController* page = [self.myTransControllers objectAtIndex:myself.myRowNum-1];
+    [page setSecondTime: true];
     [self.navigationController pushViewController:page animated:YES];
 }
 
@@ -139,7 +144,7 @@
     {
         // Get reference to the destination view controller
         TransController *vc = [segue destinationViewController];
-        
+        [vc setSecondTime:false];
         // Pass any objects to the view controller here, like...
         [vc setPeopleList:self.myTrip.peoples];
     }

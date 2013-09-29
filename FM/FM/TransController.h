@@ -21,8 +21,13 @@
 @property (strong, nonatomic) NSMutableArray *myPeoples;
 @property (strong, nonatomic) NSMutableArray *myTextFields;
 @property (strong, nonatomic) NSMutableArray *myShouldPayFields;
+
+@property bool repeated;
+@property int myRow;
+
 - (IBAction)pressSubmit:(id)sender;
 - (void)setPeopleList:(NSMutableArray *) peoples;
 - (NSString*) switchCate: (int) num;
+- (void) setSecondTime:(bool)isRepeated;
 
 @end

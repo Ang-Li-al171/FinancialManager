@@ -38,6 +38,7 @@
 		4BD08C3617F7B040006C46BA /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C3417F7B040006C46BA /* ATTSpeechKit.a */; };
 		4BD08C3917F7B8E7006C46BA /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */; };
 		4BD08C3C17F7B99D006C46BA /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */; };
+		BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 		BCCC258017F74CE500531A9E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC257F17F74CE500531A9E /* TransController.m */; };
 		BCCC258317F76E0700531A9E /* CollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC258217F76E0700531A9E /* CollectionFlowLayout.m */; };
@@ -96,6 +97,7 @@
 		4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechConfig.m; path = ATTSpeechKit/SpeechConfig.m; sourceTree = SOURCE_ROOT; };
 		4BD08C3A17F7B99D006C46BA /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
 		4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
+		BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = collectionBG.jpg; sourceTree = "<group>"; };
 		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 		BCCC257E17F74CE500531A9E /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		4B451E8617F6339800A9F0BE /* FM */ = {
 			isa = PBXGroup;
 			children = (
+				BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */,
 				4B451E8F17F6339800A9F0BE /* FMAppDelegate.h */,
 				4B451E9017F6339800A9F0BE /* FMAppDelegate.m */,
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
@@ -303,6 +306,7 @@
 				4B9CC46817F8966F0094DBAF /* mic.png in Resources */,
 				4B9CC46A17F8996D0094DBAF /* mic.png in Resources */,
 				4B9CC46C17F8A4390094DBAF /* bigbytelogo.png in Resources */,
+				BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
