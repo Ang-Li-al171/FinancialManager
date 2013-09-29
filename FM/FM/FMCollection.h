@@ -14,6 +14,8 @@
 
 @interface FMCollection : UICollectionViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *naviBarCollection;
+
 @property (strong, nonatomic) UIImage * DEFAULT_TRANS_PIC;
 @property (strong, nonatomic) UIImage * DINING;
 @property (strong, nonatomic) UIImage * HOTEL;
