@@ -8,23 +8,25 @@
 
 #import "FMTrip.h"
 #import "FMPair.h"
+#import "FMBrain.h"
 
 @implementation FMTrip
 
-@synthesize peoples, events, name, budgetTable, description;
+@synthesize peoples, events, name, budgetTable, description,brain;
 
--(id) initWithName: (NSString*) n{
+-(id) initWithName: (NSString*) n WithBrain: (FMBrain*) b{
     self = [super init];
     name = n;
+    brain = b;
     peoples = [[NSMutableArray alloc]init];
     events = [[NSMutableArray alloc] init];
     budgetTable = [[NSMutableArray alloc] init];
     return self;
 }
 
--(id) initWithName: (NSString*) n WithDescription: (NSString*) d{
+-(id) initWithName: (NSString*) n WithDescription: (NSString*) d WithBrain: (FMBrain*) b{
     description = d;
-    return [self initWithName:n];
+    return [self initWithName:n WithBrain:b];
 }
 
 -(void) addPeople: (NSString*) peopleName{

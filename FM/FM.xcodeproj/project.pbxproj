@@ -28,6 +28,9 @@
 		4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */; };
 		4B607D2117F761580070792E /* defaultPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2017F761580070792E /* defaultPic.jpg */; };
 		4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2217F763ED0070792E /* defaultEventPic.png */; };
+		4B9CC46817F8966F0094DBAF /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9CC46717F8966F0094DBAF /* mic.png */; };
+		4B9CC46A17F8996D0094DBAF /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9CC46917F8996D0094DBAF /* mic.png */; };
+		4B9CC46C17F8A4390094DBAF /* bigbytelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9CC46B17F8A4390094DBAF /* bigbytelogo.png */; };
 		4BD08C2C17F7AAA3006C46BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C2B17F7AAA3006C46BA /* AudioToolbox.framework */; };
 		4BD08C2E17F7AAAA006C46BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C2D17F7AAAA006C46BA /* AVFoundation.framework */; };
 		4BD08C3017F7AAAF006C46BA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C2F17F7AAAF006C46BA /* CFNetwork.framework */; };
@@ -81,6 +84,9 @@
 		4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventViewController.m; path = ../NewEventViewController.m; sourceTree = "<group>"; };
 		4B607D2017F761580070792E /* defaultPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultPic.jpg; sourceTree = "<group>"; };
 		4B607D2217F763ED0070792E /* defaultEventPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEventPic.png; sourceTree = "<group>"; };
+		4B9CC46717F8966F0094DBAF /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
+		4B9CC46917F8996D0094DBAF /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
+		4B9CC46B17F8A4390094DBAF /* bigbytelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigbytelogo.png; sourceTree = "<group>"; };
 		4BD08C2B17F7AAA3006C46BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BD08C2D17F7AAAA006C46BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4BD08C2F17F7AAAF006C46BA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -176,6 +182,9 @@
 				0462F8F317F79CE9005FE399 /* FMPair.m */,
 				0462F8ED17F79C1B005FE399 /* FMTrip.m */,
 				0462F8EA17F79B29005FE399 /* FMBrain.m */,
+				4B9CC46B17F8A4390094DBAF /* bigbytelogo.png */,
+				4B9CC46917F8996D0094DBAF /* mic.png */,
+				4B9CC46717F8966F0094DBAF /* mic.png */,
 				BCCC258417F7760700531A9E /* restaurant_icon_6060.png */,
 				BCCC258517F7760800531A9E /* icon-attraction_6060.png */,
 				BCCC258617F7760800531A9E /* Hotel Icon black_6060.png */,
@@ -294,6 +303,9 @@
 				BCCC258D17F7760800531A9E /* shopping_cart_icon_6060.jpg in Resources */,
 				4B607D2117F761580070792E /* defaultPic.jpg in Resources */,
 				4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */,
+				4B9CC46817F8966F0094DBAF /* mic.png in Resources */,
+				4B9CC46A17F8996D0094DBAF /* mic.png in Resources */,
+				4B9CC46C17F8A4390094DBAF /* bigbytelogo.png in Resources */,
 				BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

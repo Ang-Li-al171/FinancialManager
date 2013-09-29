@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FMTrip.h"
 #import "FMPair.h"
+#import "FMBrain.h"
 
 @interface FMTrip : NSObject
 
@@ -17,9 +18,11 @@
 @property NSMutableArray *events;
 @property NSString *name;
 @property NSMutableArray *budgetTable;
+@property FMBrain *brain;
 
--(id) initWithName: (NSString*) n;
--(id) initWithName: (NSString*) n WithDescription: (NSString*) d;
+
+-(id) initWithName: (NSString*) n WithBrain: (FMBrain*) b;
+-(id) initWithName: (NSString*) n WithDescription: (NSString*) d WithBrain: (FMBrain*) b;
 -(void) addPeople: (NSString*) peopleName;
 -(void) addPeoples: (NSString*) peopleNames;
 -(void) addEvent:(NSString*) eventName;
