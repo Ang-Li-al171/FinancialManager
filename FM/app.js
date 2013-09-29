@@ -12,14 +12,14 @@
 - Update the 'api_key' and'api_secret' 
 - Update the target cell phone number 
 - Type 'node app.js'
-- Open a browser and go to http://localhost:8080/ 
+- Open a browser and go to 	
 - Your cell phone should have received a text message!
 
 
 */
 
 
-node app.js
+
 var request = require('request');
 var connect = require('connect');
 

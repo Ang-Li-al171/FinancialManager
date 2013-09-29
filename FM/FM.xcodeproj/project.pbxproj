@@ -12,6 +12,7 @@
 		0462F8EB17F79B29005FE399 /* FMBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8EA17F79B29005FE399 /* FMBrain.m */; };
 		0462F8EE17F79C1B005FE399 /* FMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8ED17F79C1B005FE399 /* FMTrip.m */; };
 		0462F8F417F79CE9005FE399 /* FMPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8F317F79CE9005FE399 /* FMPair.m */; };
+		4B05DBA317F8CAD5002B2847 /* CreateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B05DBA217F8CAD5002B2847 /* CreateLogo.png */; };
 		4B451E8117F6339800A9F0BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8017F6339800A9F0BE /* UIKit.framework */; };
 		4B451E8317F6339800A9F0BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8217F6339800A9F0BE /* Foundation.framework */; };
 		4B451E8517F6339800A9F0BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8417F6339800A9F0BE /* CoreGraphics.framework */; };
@@ -62,6 +63,7 @@
 		0462F8ED17F79C1B005FE399 /* FMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTrip.m; sourceTree = "<group>"; };
 		0462F8F217F79CE8005FE399 /* FMPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
 		0462F8F317F79CE9005FE399 /* FMPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
+		4B05DBA217F8CAD5002B2847 /* CreateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreateLogo.png; sourceTree = "<group>"; };
 		4B451E7D17F6339800A9F0BE /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B451E8017F6339800A9F0BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B451E8217F6339800A9F0BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -201,6 +203,7 @@
 				04296B8317F655CE00423497 /* FMCell.h */,
 				04296B8417F655CE00423497 /* FMCell.m */,
 				4B51D0F517F6A2480017C4D0 /* pic.jpg */,
+				4B05DBA217F8CAD5002B2847 /* CreateLogo.png */,
 				4B607D2217F763ED0070792E /* defaultEventPic.png */,
 				4B607D2017F761580070792E /* defaultPic.jpg */,
 				4B451EA317F66C6A00A9F0BE /* CustomHomeCell.h */,
@@ -311,6 +314,7 @@
 				4B9CC46C17F8A4390094DBAF /* bigbytelogo.png in Resources */,
 				BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */,
 				BCD4807E17F8C859007BEE41 /* transBG.jpg in Resources */,
+				4B05DBA317F8CAD5002B2847 /* CreateLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
