@@ -22,6 +22,18 @@
 
 @end
 
+@interface UIColor (MyProject)
+
++(UIColor *) colorForSomePurpose;
+
+@end
+
+@implementation UIColor (MyProject)
+
++(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:0.6 green:0.8 blue:0.5 alpha:1.0]; }
+
+@end
+
 @implementation FMViewController
 @synthesize myHomeTableView, myBrain;
 
@@ -44,8 +56,8 @@
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
     
-    TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Porto Rico", @"San Diego", nil];
-    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Spring Break 2013", nil];
+    TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Porto Rico", @"Sample Event", nil];
+    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Big Byte Challenge is Awesome", nil];
     
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
@@ -88,14 +100,21 @@
     static NSString *CellIdentifier = @"Cell";
     CustomHomeCell *Cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    Cell.contentView.backgroundColor=[UIColor colorForSomePurpose] ;
+    
     if (!Cell) {
         Cell = [[CustomHomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Cell.TitleLabel.text = [TitleLabel objectAtIndex:indexPath.row];
+    NSDictionary *attributes = [(NSAttributedString *)Cell.TitleLabel.attributedText attributesAtIndex:0 effectiveRange:NULL];
+    NSString *updateTitle = [TitleLabel objectAtIndex:indexPath.row];
+    Cell.TitleLabel.attributedText = [[NSAttributedString alloc] initWithString:updateTitle attributes:attributes];
+    //Cell.TitleLabel.text= [TitleLabel objectAtIndex:indexPath.row];
+    //Cell.TitleLabel.font = [UIFont fontWithName:@"Futura Condensed ExtraBold" size:22];
     Cell.DescriLabel.text = [DescriLabel objectAtIndex:indexPath.row];
 
-    Cell.imageView.image = _image;
+    Cell.eventImageView.image = _image;
+    Cell.eventImageView.contentMode = UIViewContentModeScaleAspectFill;
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
     return Cell;
