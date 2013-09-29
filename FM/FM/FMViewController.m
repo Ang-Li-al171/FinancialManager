@@ -52,7 +52,7 @@
 {
     [super viewDidLoad];
     
-    self.myBrain = [[FMBrain alloc] initWithFile:@"/User/angli/Desktop/test.plist"];
+    self.myBrain = [[FMBrain alloc] initWithFile:@"/User/angli/Desktop/data.plist"];
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
     
@@ -140,6 +140,7 @@
     }
     
 }
+
 
 //Add new cells
 - (void)goToNewEventPage {

@@ -52,13 +52,19 @@
     for(int i = 0; i < self.myPeoples.count; i++){
         UITextField *textIn =  [[UITextField alloc] initWithFrame:
                                 CGRectMake(370, 380+350*i/self.myPeoples.count, 150, 21)];
-        textIn.backgroundColor = [UIColor whiteColor];
+        textIn.backgroundColor = [UIColor grayColor];
+        textIn.textColor = [UIColor whiteColor];
+        textIn.textAlignment = UITextAlignmentCenter;
+        [textIn setBorderStyle:UITextBorderStyleRoundedRect];
         [self.view addSubview:textIn];
         [self.myTextFields addObject:textIn];
         
         UITextField *textShouldPay =  [[UITextField alloc] initWithFrame:
                                 CGRectMake(540, 380+350*i/self.myPeoples.count, 150, 21)];
-        textShouldPay.backgroundColor = [UIColor whiteColor];
+        textShouldPay.backgroundColor = [UIColor grayColor];
+        textShouldPay.textColor = [UIColor whiteColor];
+        textShouldPay.textAlignment = UITextAlignmentCenter;
+        [textShouldPay setBorderStyle:UITextBorderStyleRoundedRect];
         [self.view addSubview:textShouldPay];
         [self.myShouldPayFields addObject:textShouldPay];
     }
@@ -108,6 +114,9 @@
 - (IBAction)pressSubmit:(id)sender {
     NSInteger num = self.navigationController.viewControllers.count-2;
     FMCollection *collectionController = [self.navigationController.viewControllers objectAtIndex:num];
+    
+    // set the title of the navigation bar
+    self.naviBarTrans.title = [NSString stringWithFormat:@"%@%@", @"Details: ", self.transNameInput.text];
     
     int row = [self.catePicker selectedRowInComponent:0];
     

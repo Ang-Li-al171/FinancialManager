@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMViewController.h"
 
 @interface FMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) FMViewController* rootViewController;
 
 @end
