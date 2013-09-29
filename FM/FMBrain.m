@@ -13,10 +13,10 @@
 @synthesize trips;
 
 -(void) addTripWithName: (NSString*) tripName {
-    [trips addObject:[[FMTrip alloc] initWithName:tripName]];
+    [trips addObject:[[FMTrip alloc] initWithName:tripName WithBrain:self]];
 }
 -(void) addTripWithName:(NSString *)tripName WithDescription: (NSString*) tripDescp {
-    [trips addObject:[[FMTrip alloc]initWithName:tripName WithDescription:tripDescp]];
+    [trips addObject:[[FMTrip alloc]initWithName:tripName WithDescription:tripDescp WithBrain:self]];
 }
 
 -(void) deleteTripWithIndex: (int) index{
