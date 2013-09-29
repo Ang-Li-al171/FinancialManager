@@ -13,6 +13,7 @@
 #import "FMTrip.h"
 #import "TransController.h"
 #import "menuButton.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface FMCollection ()
 
@@ -79,12 +80,22 @@
             [lastaddedButton setMyRowNum:indexPath.row];
             [lastaddedButton addTarget:self action:@selector(pressTransButton:) forControlEvents:UIControlEventTouchDown];
         }
+        
+        // UI apperance
         aCell.backgroundColor = [UIColor clearColor];
+        [[aCell.myButton layer] setCornerRadius:15.0f];
+        [[aCell.myButton layer] setBorderWidth:4.0f];
+        [[aCell.myButton layer] setBorderColor:[UIColor whiteColor].CGColor];
         return aCell;
     }
     else{
         FMCell* aCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
         aCell.myLabel.text = [[[self.myTrip getNameEntrys] objectAtIndex: (indexPath.section-1)] objectAtIndex: indexPath.row];
+        
+        // UI appearance
+        [[aCell layer] setCornerRadius:15.0f];
+        [[aCell layer] setBorderWidth:2.0f];
+        [[aCell layer] setBorderColor:[UIColor grayColor].CGColor];
         return aCell;
     }
 }
