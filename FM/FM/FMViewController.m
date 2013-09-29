@@ -56,8 +56,8 @@
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
     
-    TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Porto Rico", @"Sample Event", nil];
-    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Big Byte Challenge is Awesome", nil];
+    TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Best Event", @"Sample Event", nil];
+    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"Sherry loves Candy Crush, Ang loves to sleep, Yaqi loves to eat", @"Big Byte Challenge is Awesome", nil];
     
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
@@ -100,7 +100,7 @@
     static NSString *CellIdentifier = @"Cell";
     CustomHomeCell *Cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Cell.contentView.backgroundColor=[UIColor colorForSomePurpose] ;
+    Cell.contentView.backgroundColor=[UIColor orangeColor] ;
     
     if (!Cell) {
         Cell = [[CustomHomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -109,8 +109,6 @@
     NSDictionary *attributes = [(NSAttributedString *)Cell.TitleLabel.attributedText attributesAtIndex:0 effectiveRange:NULL];
     NSString *updateTitle = [TitleLabel objectAtIndex:indexPath.row];
     Cell.TitleLabel.attributedText = [[NSAttributedString alloc] initWithString:updateTitle attributes:attributes];
-    //Cell.TitleLabel.text= [TitleLabel objectAtIndex:indexPath.row];
-    //Cell.TitleLabel.font = [UIFont fontWithName:@"Futura Condensed ExtraBold" size:22];
     Cell.DescriLabel.text = [DescriLabel objectAtIndex:indexPath.row];
 
     Cell.eventImageView.image = _image;
@@ -174,10 +172,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     //NSLog(@"index path: %d", indexPath.row);
     FMCollection* page = [TransactionPage objectAtIndex:indexPath.row];
     //NSLog(@"array size: %d", TransactionPage.count);
     [self.navigationController pushViewController:page animated:YES];
+    [myHomeTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
