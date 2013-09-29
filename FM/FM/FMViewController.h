@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ATTSpeechKit.h"
 
-@interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+@interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ATTSpeechServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myHomeTableView;
 
@@ -16,6 +17,9 @@
 @property(nonatomic) NSString *myNewEventMemo;
 @property(nonatomic) NSString *myNewEventMember;
 @property(nonatomic) UIImage *image;
+- (IBAction)listen:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *talkButton;
+@property (weak, nonatomic) IBOutlet UILabel *talkDisplayLabel;
 
 - (IBAction)insertNewObject;
 

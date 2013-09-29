@@ -25,6 +25,13 @@
 		4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */; };
 		4B607D2117F761580070792E /* defaultPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2017F761580070792E /* defaultPic.jpg */; };
 		4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2217F763ED0070792E /* defaultEventPic.png */; };
+		4BD08C2C17F7AAA3006C46BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C2B17F7AAA3006C46BA /* AudioToolbox.framework */; };
+		4BD08C2E17F7AAAA006C46BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C2D17F7AAAA006C46BA /* AVFoundation.framework */; };
+		4BD08C3017F7AAAF006C46BA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C2F17F7AAAF006C46BA /* CFNetwork.framework */; };
+		4BD08C3217F7AAB5006C46BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C3117F7AAB5006C46BA /* Security.framework */; };
+		4BD08C3617F7B040006C46BA /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C3417F7B040006C46BA /* ATTSpeechKit.a */; };
+		4BD08C3917F7B8E7006C46BA /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */; };
+		4BD08C3C17F7B99D006C46BA /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 		BCCC258017F74CE500531A9E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC257F17F74CE500531A9E /* TransController.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +64,16 @@
 		4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventViewController.m; path = ../NewEventViewController.m; sourceTree = "<group>"; };
 		4B607D2017F761580070792E /* defaultPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultPic.jpg; sourceTree = "<group>"; };
 		4B607D2217F763ED0070792E /* defaultEventPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultEventPic.png; sourceTree = "<group>"; };
+		4BD08C2B17F7AAA3006C46BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4BD08C2D17F7AAAA006C46BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4BD08C2F17F7AAAF006C46BA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4BD08C3117F7AAB5006C46BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4BD08C3417F7B040006C46BA /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ATTSpeechKit.a; sourceTree = "<group>"; };
+		4BD08C3517F7B040006C46BA /* ATTSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTSpeechKit.h; sourceTree = "<group>"; };
+		4BD08C3717F7B8E7006C46BA /* SpeechConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechConfig.h; path = ATTSpeechKit/SpeechConfig.h; sourceTree = SOURCE_ROOT; };
+		4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechConfig.m; path = ATTSpeechKit/SpeechConfig.m; sourceTree = SOURCE_ROOT; };
+		4BD08C3A17F7B99D006C46BA /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
+		4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
 		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 		BCCC257E17F74CE500531A9E /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
@@ -68,9 +85,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD08C3217F7AAB5006C46BA /* Security.framework in Frameworks */,
+				4BD08C3017F7AAAF006C46BA /* CFNetwork.framework in Frameworks */,
+				4BD08C2E17F7AAAA006C46BA /* AVFoundation.framework in Frameworks */,
+				4BD08C2C17F7AAA3006C46BA /* AudioToolbox.framework in Frameworks */,
 				4B451E8117F6339800A9F0BE /* UIKit.framework in Frameworks */,
 				4B451E8317F6339800A9F0BE /* Foundation.framework in Frameworks */,
 				4B451E8517F6339800A9F0BE /* CoreGraphics.framework in Frameworks */,
+				4BD08C3617F7B040006C46BA /* ATTSpeechKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +102,11 @@
 		4B451E7417F6339800A9F0BE = {
 			isa = PBXGroup;
 			children = (
+				4BD08C3317F7B040006C46BA /* ATTSpeechKit */,
+				4BD08C3117F7AAB5006C46BA /* Security.framework */,
+				4BD08C2F17F7AAAF006C46BA /* CFNetwork.framework */,
+				4BD08C2D17F7AAAA006C46BA /* AVFoundation.framework */,
+				4BD08C2B17F7AAA3006C46BA /* AudioToolbox.framework */,
 				4B451E8617F6339800A9F0BE /* FM */,
 				4B451E7F17F6339800A9F0BE /* Frameworks */,
 				4B451E7E17F6339800A9F0BE /* Products */,
@@ -113,6 +140,10 @@
 				4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */,
 				4B451E8F17F6339800A9F0BE /* FMAppDelegate.h */,
 				4B451E9017F6339800A9F0BE /* FMAppDelegate.m */,
+				4BD08C3717F7B8E7006C46BA /* SpeechConfig.h */,
+				4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */,
+				4BD08C3A17F7B99D006C46BA /* SpeechAuth.h */,
+				4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */,
 				4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */,
 				04296B8317F655CE00423497 /* FMCell.h */,
 				04296B8417F655CE00423497 /* FMCell.m */,
@@ -144,6 +175,15 @@
 				4B451E9617F6339800A9F0BE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BD08C3317F7B040006C46BA /* ATTSpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				4BD08C3417F7B040006C46BA /* ATTSpeechKit.a */,
+				4BD08C3517F7B040006C46BA /* ATTSpeechKit.h */,
+			);
+			path = ATTSpeechKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +265,8 @@
 				BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */,
 				4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */,
 				BCCC258017F74CE500531A9E /* TransController.m in Sources */,
+				4BD08C3917F7B8E7006C46BA /* SpeechConfig.m in Sources */,
+				4BD08C3C17F7B99D006C46BA /* SpeechAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +356,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FM/FM-Prefix.pch";
 				INFOPLIST_FILE = "FM/FM-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ATTSpeechKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -326,6 +372,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FM/FM-Prefix.pch";
 				INFOPLIST_FILE = "FM/FM-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ATTSpeechKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
