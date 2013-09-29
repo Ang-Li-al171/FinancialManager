@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "FMTrip.h"
+#import "TransController.h"
+#import "menuButton.h"
 
 
 @interface FMCollection : UICollectionViewController
@@ -23,6 +25,9 @@
 @property NSInteger numItems;
 
 @property (strong, nonatomic) NSString *myNewTransName;
+
+@property (strong, nonatomic) NSMutableArray* myTransControllers;
+@property (strong, nonatomic) NSMutableArray* myTransButtons;
 
 - (void)refresh;
 - (IBAction)setFlowAndItemSize;

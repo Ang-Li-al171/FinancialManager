@@ -12,6 +12,7 @@
 #import "CollectionFlowLayout.h"
 #import "FMTrip.h"
 #import "TransController.h"
+#import "menuButton.h"
 
 @interface FMCollection ()
 
@@ -30,6 +31,8 @@
 
 - (void)initWithTripPtr:(FMTrip *)tripPtr{
     self.myTrip = tripPtr;
+    self.myTransButtons = [[NSMutableArray alloc] init];
+    self.myTransControllers = [[NSMutableArray alloc] init];
 }
 
 //define size for each cell
@@ -62,11 +65,20 @@
     if (indexPath.section == 0){
         IconButton* aCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myButton" forIndexPath:indexPath];
         
-        int picNum = 3; //default is 3
-        
+        int picNum = 3; //default is 3, payment icon
+        //change pic based on type
         if (indexPath.row < self.numItems && indexPath.row > 0)
             picNum = [self switchCate:[[self.myTrip getEventArray] objectAtIndex:indexPath.row-1]];
         [aCell.myButton setImage:self.PICArray[picNum] forState:UIControlStateNormal];
+        [aCell.myButton setBackgroundColor:[UIColor whiteColor]];
+        
+        if (0 < indexPath.row && indexPath.row < self.numItems){
+            
+            [self.myTransButtons insertObject:aCell.myButton atIndex:0];
+            menuButton * lastaddedButton = [self.myTransButtons objectAtIndex:0];
+            [lastaddedButton setMyRowNum:indexPath.row];
+            [lastaddedButton addTarget:self action:@selector(pressTransButton:) forControlEvents:UIControlEventTouchDown];
+        }
         return aCell;
     }
     else{
@@ -95,7 +107,6 @@
     
     self.PICArray = @[self.DINING, self.HOTEL, self.FUN, self.DEFAULT_TRANS_PIC, self.SHOPPING];
 
-    NSLog(@"%d size of entryarray", [self.myTrip getEventArray].count);
     self.numItems = [self.myTrip getEventArray].count;
     
     [self setFlowAndItemSize];
@@ -110,7 +121,15 @@
 - (void) refresh
 {
     self.numItems = [self.myTrip getEventArray].count;
+    self.myTransButtons = [[NSMutableArray alloc] init];
     [self.collectionView reloadData];
+}
+
+- (void)pressTransButton:(id)sender{
+    menuButton *myself = (menuButton *) sender;
+    //NSLog(@"there are %d buttons in total, %d controllers", self.myTransButtons.count, self.myTransControllers.count);
+    TransController* page = [self.myTransControllers objectAtIndex:myself.myRowNum-1];
+    [self.navigationController pushViewController:page animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "menuButton.h"
+
 @interface IconButton : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIButton *myButton;
+@property (weak, nonatomic) IBOutlet menuButton *myButton;
 
 @end

@@ -66,7 +66,7 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 4;
+    return 5;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
@@ -101,18 +101,6 @@
 }
 
 
-//- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-//    
-//    //Here, like the table view you can get the each section of each row if you've multiple sections
-//    NSLog(@"Selected Color: %@. Index of selected color: %i", [arrayColors objectAtIndex:row], row);
-//    
-//    //Now, if you want to navigate then;
-//    // Say, OtherViewController is the controller, where you want to navigate:
-//    OtherViewController *objOtherViewController = [OtherViewController new];
-//    [self.navigationController pushViewController:objOtherViewController animated:YES];
-//    
-//}
-
 - (IBAction)pressSubmit:(id)sender {
     NSInteger num = self.navigationController.viewControllers.count-2;
     FMCollection *collectionController = [self.navigationController.viewControllers objectAtIndex:num];
@@ -135,6 +123,7 @@
         [collectionController.myTrip setShouldPay:shouldPay WithEventIndex:[collectionController.myTrip getEventArray].count-2 WithPeopleIndex:i];
     }
     
+    [collectionController.myTransControllers addObject: self];
     [collectionController refresh];
     [self.navigationController popViewControllerAnimated:YES];
 }

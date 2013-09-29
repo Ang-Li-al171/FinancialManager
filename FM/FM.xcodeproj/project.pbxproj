@@ -43,6 +43,7 @@
 		BCCC258B17F7760800531A9E /* Hotel Icon black_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258617F7760800531A9E /* Hotel Icon black_6060.png */; };
 		BCCC258C17F7760800531A9E /* transaction_6060.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258717F7760800531A9E /* transaction_6060.png */; };
 		BCCC258D17F7760800531A9E /* shopping_cart_icon_6060.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */; };
+		BCCC259017F803F600531A9E /* menuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC258F17F803F500531A9E /* menuButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,8 @@
 		BCCC258617F7760800531A9E /* Hotel Icon black_6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hotel Icon black_6060.png"; sourceTree = "<group>"; };
 		BCCC258717F7760800531A9E /* transaction_6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transaction_6060.png; sourceTree = "<group>"; };
 		BCCC258817F7760800531A9E /* shopping_cart_icon_6060.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopping_cart_icon_6060.jpg; sourceTree = "<group>"; };
+		BCCC258E17F803F500531A9E /* menuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuButton.h; sourceTree = "<group>"; };
+		BCCC258F17F803F500531A9E /* menuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				BCCC257F17F74CE500531A9E /* TransController.m */,
 				BCCC258117F76E0700531A9E /* CollectionFlowLayout.h */,
 				BCCC258217F76E0700531A9E /* CollectionFlowLayout.m */,
+				BCCC258E17F803F500531A9E /* menuButton.h */,
+				BCCC258F17F803F500531A9E /* menuButton.m */,
 			);
 			path = FM;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				0462F8EB17F79B29005FE399 /* FMBrain.m in Sources */,
 				0462F8EE17F79C1B005FE399 /* FMTrip.m in Sources */,
 				0462F8F417F79CE9005FE399 /* FMPair.m in Sources */,
+				BCCC259017F803F600531A9E /* menuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
