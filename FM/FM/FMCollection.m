@@ -286,6 +286,7 @@
         NSString *updatedMessage = [NSString stringWithFormat:@"%@\n%@", originalMessage, message];
         [myDiscussionBoard setText:updatedMessage];
     }
+    mySpeechField.text = @"";
 }
 
 
