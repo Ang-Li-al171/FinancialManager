@@ -30,7 +30,7 @@
 
 @implementation UIColor (MyProject)
 
-+(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:0.6 green:0.8 blue:0.5 alpha:1.0]; }
++(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:0.8 green:0.6 blue:0.5 alpha:1.0]; }
 
 @end
 
@@ -100,7 +100,7 @@
     static NSString *CellIdentifier = @"Cell";
     CustomHomeCell *Cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Cell.contentView.backgroundColor=[UIColor orangeColor] ;
+    Cell.contentView.backgroundColor=[UIColor colorForSomePurpose] ;
     
     if (!Cell) {
         Cell = [[CustomHomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

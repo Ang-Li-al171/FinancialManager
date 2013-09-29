@@ -326,39 +326,17 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUu-YT-kVJ">
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-mw-aSs">
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <rect key="contentStretch" x="0.20000000000000001" y="0.80000000000000004" width="1" height="1"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="118" id="RFT-ms-LWQ"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="WELCOME">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.65632434909969128" blue="0.15454105388355144" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="30" name="Futura-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.18000000715255737"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" red="0.16235763319999999" green="0.39306945850000002" blue="0.7275390625" alpha="1" colorSpace="calibratedRGB"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bigbytelogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-L2-wl6">
                                 <constraints>
-                                    <constraint firstItem="kMz-mw-aSs" firstAttribute="top" secondItem="MUu-YT-kVJ" secondAttribute="top" constant="-42" id="JeA-C5-Blu"/>
-                                    <constraint firstItem="kMz-mw-aSs" firstAttribute="trailing" secondItem="MUu-YT-kVJ" secondAttribute="trailing" type="default" id="h44-y3-mGP"/>
-                                    <constraint firstItem="kMz-mw-aSs" firstAttribute="leading" secondItem="MUu-YT-kVJ" secondAttribute="leading" type="default" id="qqa-R6-fHG"/>
+                                    <constraint firstAttribute="height" constant="521" id="d9j-hh-t4H"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-Yz-Tcr">
-                                <color key="backgroundColor" red="1" green="0.65632434910000004" blue="0.1545410539" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.65632434910000004" blue="0.1545410539" alpha="0.089999999999999997" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="749" id="Qzk-kj-ePO"/>
                                 </constraints>
-                                <color key="separatorColor" red="1" green="0.65632434910000004" blue="0.1545410539" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="uSM-fa-PEL" customClass="CustomHomeCell">
                                         <rect key="frame" x="0.0" y="22" width="768" height="103"/>
@@ -417,14 +395,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUu-YT-kVJ">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-mw-aSs">
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="contentStretch" x="0.20000000000000001" y="0.80000000000000004" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="118" id="RFT-ms-LWQ"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="WELCOME">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.65632434909969128" blue="0.15454105388355144" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="30" name="Futura-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.18000000715255737"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" red="0.16235763319999999" green="0.39306945850000002" blue="0.7275390625" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kMz-mw-aSs" firstAttribute="top" secondItem="MUu-YT-kVJ" secondAttribute="top" constant="-42" id="JeA-C5-Blu"/>
+                                    <constraint firstItem="kMz-mw-aSs" firstAttribute="trailing" secondItem="MUu-YT-kVJ" secondAttribute="trailing" type="default" id="h44-y3-mGP"/>
+                                    <constraint firstItem="kMz-mw-aSs" firstAttribute="leading" secondItem="MUu-YT-kVJ" secondAttribute="leading" type="default" id="qqa-R6-fHG"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.65632434910000004" blue="0.1545410539" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98431378602981567" green="0.95294123888015747" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="eaJ-Yz-Tcr" firstAttribute="top" secondItem="5" secondAttribute="top" constant="117" id="0zj-Lm-ez0"/>
                             <constraint firstItem="MUu-YT-kVJ" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="1nd-SF-vqJ"/>
-                            <constraint firstItem="eaJ-Yz-Tcr" firstAttribute="top" secondItem="5" secondAttribute="top" constant="117" id="Atn-Ch-KvR"/>
                             <constraint firstItem="eaJ-Yz-Tcr" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="D4t-Te-VuL"/>
                             <constraint firstAttribute="bottom" secondItem="MUu-YT-kVJ" secondAttribute="bottom" constant="851" id="NLp-L0-N4S"/>
+                            <constraint firstItem="Qyd-L2-wl6" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="loX-NZ-MoG"/>
+                            <constraint firstItem="Qyd-L2-wl6" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="rY0-9q-L2G"/>
                             <constraint firstItem="eaJ-Yz-Tcr" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="sRW-hw-XhO"/>
+                            <constraint firstItem="Qyd-L2-wl6" firstAttribute="top" secondItem="5" secondAttribute="top" constant="385" id="uXe-sI-a0d"/>
                             <constraint firstItem="MUu-YT-kVJ" firstAttribute="top" secondItem="5" secondAttribute="top" constant="42" id="xxl-5r-dAz"/>
                             <constraint firstItem="MUu-YT-kVJ" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="zUz-5e-tjp"/>
                         </constraints>
@@ -562,91 +570,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bigbytelogo.png" width="301" height="201"/>
         <image name="mic.png" width="512" height="512"/>
     </resources>
-    <classes>
-        <class className="CustomHomeCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomHomeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="DescriLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="TitleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FMCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FMCollection" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCollection.h"/>
-            <relationships>
-                <relationship kind="action" name="setFlowAndItemSize"/>
-            </relationships>
-        </class>
-        <class className="FMViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="insertNewObject"/>
-                <relationship kind="outlet" name="myHomeTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="IconButton" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IconButton.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myButton" candidateClass="menuButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewEventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewEventViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="chooseExistingBarButton:"/>
-                <relationship kind="action" name="createNewEvent:"/>
-                <relationship kind="action" name="listenToMemo:"/>
-                <relationship kind="action" name="listenToName:"/>
-                <relationship kind="outlet" name="createNewEventView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="memberText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="memoText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nameText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="photoLibraryBarButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="TransController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TransController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressSubmit:"/>
-                <relationship kind="outlet" name="catePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="myView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="splitAll" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="totalCost" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalCostInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="transName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="transNameInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="menuButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/menuButton.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
