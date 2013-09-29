@@ -135,6 +135,7 @@
     TransController* page = [self.myTransControllers objectAtIndex:myself.myRowNum-1];
     [page setSecondTime: true];
     [self.navigationController pushViewController:page animated:YES];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -149,6 +150,7 @@
         [vc setPeopleList:self.myTrip.peoples];
     }
 }
+
 
 - (int) switchCate: (NSString*) str {
     int pic = 0;

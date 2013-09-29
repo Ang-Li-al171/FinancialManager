@@ -13,7 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIStoryboard *mainstoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"          bundle:nil];
+    self.rootViewController = [mainstoryboard      instantiateViewControllerWithIdentifier:@"RootController"];
+    
     return YES;
 }
 							
@@ -36,11 +38,13 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    
+    [self.rootViewController.myBrain encodeToFile:@"/User/angli/Desktop/data.plist"];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

@@ -11,6 +11,7 @@
 @interface TransController : UIViewController
 @property (weak, nonatomic) IBOutlet UISwitch *splitAll;
 @property (weak, nonatomic) IBOutlet UIPickerView *catePicker;
+@property (weak, nonatomic) IBOutlet UINavigationItem *naviBarTrans;
 
 @property (strong, nonatomic) IBOutlet UIView *myView;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;

@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38l-DI-u0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1129" y="-3291"/>
+            <point key="canvasLocation" x="-1065" y="-4867"/>
         </scene>
         <!--Trans Controller - New Transaction-->
         <scene sceneID="AOK-RU-xQx">
@@ -159,7 +159,6 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEl-wH-tpZ"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyi-0U-Obb">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="c89-Co-WAw"/>
@@ -224,34 +223,49 @@
                                     <constraint firstAttribute="width" constant="165" id="a7g-VZ-759"/>
                                 </constraints>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eX-3V-AxO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XEU-xi-6h6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Note:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-cb-ZsB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <constraints>
                             <constraint firstItem="Q3T-3v-jM2" firstAttribute="baseline" secondItem="AGu-oX-pHl" secondAttribute="baseline" type="default" id="3qe-vV-m9H"/>
-                            <constraint firstItem="tRn-QK-XKX" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="175" id="5te-Lx-34J"/>
-                            <constraint firstItem="wpb-D9-bqD" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="253" id="B7R-Ff-JWW"/>
-                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="374" id="Bvj-mX-4va"/>
+                            <constraint firstItem="nGm-IW-622" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="171" id="499-w0-6w2"/>
+                            <constraint firstItem="TKf-xp-y4D" firstAttribute="trailing" secondItem="9ZE-pD-vat" secondAttribute="trailing" type="default" id="B91-Dz-ACB"/>
+                            <constraint firstItem="VIY-cb-ZsB" firstAttribute="centerX" secondItem="wpb-D9-bqD" secondAttribute="centerX" type="default" id="BfQ-YO-FVK"/>
+                            <constraint firstAttribute="trailing" secondItem="9ZE-pD-vat" secondAttribute="trailing" constant="26" id="CHv-IE-c70"/>
                             <constraint firstItem="Q3T-3v-jM2" firstAttribute="top" secondItem="9ZE-pD-vat" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CT4-VN-kZN"/>
-                            <constraint firstAttribute="bottom" secondItem="pyi-0U-Obb" secondAttribute="bottom" constant="105" id="F2v-c5-Bob"/>
+                            <constraint firstItem="7eX-3V-AxO" firstAttribute="leading" secondItem="nGm-IW-622" secondAttribute="leading" type="default" id="Etu-Q8-OuQ"/>
+                            <constraint firstAttribute="trailing" secondItem="pyi-0U-Obb" secondAttribute="trailing" constant="78" id="JKi-a5-b1K"/>
                             <constraint firstItem="9ZE-pD-vat" firstAttribute="leading" secondItem="TKf-xp-y4D" secondAttribute="leading" type="default" id="JTr-Br-u68"/>
-                            <constraint firstItem="tRn-QK-XKX" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="162" id="KTF-Ad-ZzE"/>
-                            <constraint firstItem="nGm-IW-622" firstAttribute="leading" secondItem="iCr-Pc-lpG" secondAttribute="leading" type="default" id="Qu6-sF-SO4"/>
+                            <constraint firstAttribute="trailing" secondItem="AGu-oX-pHl" secondAttribute="trailing" constant="291" id="LMT-wg-Ks7"/>
+                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="100" id="QOu-gw-Z8m"/>
+                            <constraint firstItem="7eX-3V-AxO" firstAttribute="trailing" secondItem="nGm-IW-622" secondAttribute="trailing" type="default" id="Sch-sS-IXe"/>
                             <constraint firstItem="ARt-cS-8Vx" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="63" id="UiH-ox-QvB"/>
-                            <constraint firstItem="qEl-wH-tpZ" firstAttribute="trailing" secondItem="WgY-jp-RNs" secondAttribute="trailing" type="default" id="XOm-9Z-4id"/>
+                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="364" id="XBq-5c-c0R"/>
+                            <constraint firstItem="7eX-3V-AxO" firstAttribute="baseline" secondItem="VIY-cb-ZsB" secondAttribute="baseline" type="default" id="Ym7-gL-v5K"/>
+                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="baseline" secondItem="tRn-QK-XKX" secondAttribute="baseline" type="default" id="ZUj-5X-JdI"/>
                             <constraint firstItem="9ZE-pD-vat" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="290" id="ZZ0-aX-88Q"/>
                             <constraint firstAttribute="trailing" secondItem="Q3T-3v-jM2" secondAttribute="trailing" constant="102" id="Zjf-0u-KBG"/>
                             <constraint firstAttribute="trailing" secondItem="ARt-cS-8Vx" secondAttribute="trailing" constant="45" id="atZ-66-Ffj"/>
+                            <constraint firstItem="wpb-D9-bqD" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="175" id="b2Z-Db-W7P"/>
+                            <constraint firstItem="tRn-QK-XKX" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="176" id="cji-VK-dxW"/>
                             <constraint firstItem="TKf-xp-y4D" firstAttribute="centerY" secondItem="Q3T-3v-jM2" secondAttribute="centerY" type="default" id="f9g-Sp-Cqh"/>
-                            <constraint firstItem="ARt-cS-8Vx" firstAttribute="bottom" secondItem="nGm-IW-622" secondAttribute="bottom" type="default" id="gMD-kL-1E4"/>
                             <constraint firstItem="wpb-D9-bqD" firstAttribute="centerX" secondItem="tRn-QK-XKX" secondAttribute="centerX" type="default" id="i4M-EE-oNI"/>
-                            <constraint firstItem="9ZE-pD-vat" firstAttribute="centerX" secondItem="TKf-xp-y4D" secondAttribute="centerX" type="default" id="kTW-qT-mY4"/>
-                            <constraint firstAttribute="trailing" secondItem="TKf-xp-y4D" secondAttribute="trailing" constant="26" id="mdS-ae-suF"/>
-                            <constraint firstItem="AGu-oX-pHl" firstAttribute="centerX" secondItem="nGm-IW-622" secondAttribute="centerX" type="default" id="rhb-pH-62o"/>
-                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="trailing" secondItem="nGm-IW-622" secondAttribute="trailing" type="default" id="rz3-jS-24o"/>
-                            <constraint firstItem="pyi-0U-Obb" firstAttribute="centerX" secondItem="qEl-wH-tpZ" secondAttribute="centerX" type="default" id="s3D-Nj-RRC"/>
-                            <constraint firstItem="tRn-QK-XKX" firstAttribute="top" secondItem="iCr-Pc-lpG" secondAttribute="top" type="default" id="s9I-7X-0Ls"/>
-                            <constraint firstItem="qEl-wH-tpZ" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" type="default" id="scK-8N-y3q"/>
-                            <constraint firstItem="qEl-wH-tpZ" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" type="default" id="stl-jJ-tPU"/>
+                            <constraint firstAttribute="bottom" secondItem="pyi-0U-Obb" secondAttribute="bottom" constant="99" id="ifJ-l1-pvh"/>
+                            <constraint firstItem="7eX-3V-AxO" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="250" id="jJ1-R1-m4R"/>
+                            <constraint firstItem="nGm-IW-622" firstAttribute="leading" secondItem="iCr-Pc-lpG" secondAttribute="leading" type="default" id="lOb-Oi-L5R"/>
+                            <constraint firstItem="VIY-cb-ZsB" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="254" id="p3i-4h-YM4"/>
+                            <constraint firstItem="nGm-IW-622" firstAttribute="trailing" secondItem="iCr-Pc-lpG" secondAttribute="trailing" type="default" id="swl-oy-iCB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Transaction" id="dgb-0P-ew1"/>
@@ -259,6 +273,7 @@
                     <connections>
                         <outlet property="catePicker" destination="ARt-cS-8Vx" id="aaH-sd-Zi6"/>
                         <outlet property="myView" destination="WgY-jp-RNs" id="UDy-O2-M4J"/>
+                        <outlet property="naviBarTrans" destination="dgb-0P-ew1" id="WeV-YT-Osy"/>
                         <outlet property="splitAll" destination="TKf-xp-y4D" id="U0b-KB-3fx"/>
                         <outlet property="submitButton" destination="pyi-0U-Obb" id="sDS-hM-Huy"/>
                         <outlet property="totalCost" destination="wpb-D9-bqD" id="rjE-YO-hpr"/>
@@ -269,12 +284,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRM-9Z-ZtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="-3274"/>
+            <point key="canvasLocation" x="-185" y="-4850"/>
         </scene>
         <!--View Controller - Events-->
         <scene sceneID="4">
             <objects>
-                <viewController title="Events" id="2" customClass="FMViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootController" title="Events" id="2" customClass="FMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1097" y="-2127"/>
+            <point key="canvasLocation" x="-1033" y="-3703"/>
         </scene>
         <!--Collection - List of Transactions-->
         <scene sceneID="aAB-8a-Yog">
@@ -493,7 +508,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56h-9c-WpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-211" y="-2135"/>
+            <point key="canvasLocation" x="-147" y="-3711"/>
         </scene>
         <!--Navigation Controller - Controller-->
         <scene sceneID="Ysz-hs-xk3">
@@ -517,7 +532,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4f-oI-o1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2016" y="-2135"/>
+            <point key="canvasLocation" x="-1952" y="-3711"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
