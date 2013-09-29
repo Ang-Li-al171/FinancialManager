@@ -19,6 +19,10 @@
     [trips addObject:[[FMTrip alloc]initWithName:tripName WithDescription:tripDescp]];
 }
 
+-(void) deleteTripWithIndex: (int) index{
+    [trips removeObjectAtIndex:index];
+}
+
 -(FMTrip*) getTrip: (int) tripIndex {
     return [trips objectAtIndex:tripIndex];
 }

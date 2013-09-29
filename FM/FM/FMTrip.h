@@ -21,12 +21,13 @@
 -(id) initWithName: (NSString*) n;
 -(id) initWithName: (NSString*) n WithDescription: (NSString*) d;
 -(void) addPeople: (NSString*) peopleName;
+-(void) addPeoples: (NSString*) peopleNames;
 -(void) addEvent:(NSString*) eventName;
+-(void) deleteEvent: (int) index;
 -(NSMutableArray*) getEventArray;
 -(NSMutableArray*) getNameEntrys;
 -(void) setPaid: (int) money WithEventIndex: (int) eventIndex WithPeopleIndex: (int) peopleIndex;
 -(void) setShouldPay: (int) money WithEventIndex: (int) eventIndex WithPeopleIndex: (int) peopleIndex;
 -(void) setEventToAverageCost:(int) eventIndex;
--(void) addPeoples: (NSString*) peopleNames;
 @end
 

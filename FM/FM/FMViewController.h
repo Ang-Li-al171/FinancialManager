@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FMBrain.h"
 
-@interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+@interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myHomeTableView;
 

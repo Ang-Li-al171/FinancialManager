@@ -39,8 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    NSLog(@"did go here");
     
     self.myBrain = [[FMBrain alloc] initWithFile:@"/User/angli/Desktop/test.plist"];
     self.myHomeTableView.dataSource = self;
@@ -162,5 +160,6 @@
     //NSLog(@"array size: %d", TransactionPage.count);
     [self.navigationController pushViewController:page animated:YES];
 }
+
 
 @end

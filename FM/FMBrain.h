@@ -16,6 +16,7 @@
 
 -(void) addTripWithName: (NSString*) name ;
 -(void) addTripWithName:(NSString *)tripName WithDescription: (NSString*) tripDescp;
+-(void) deleteTripWithIndex: (int) index;
 -(NSMutableArray*) getTripNames;
 -(FMTrip*) getTrip: (int) tripIndex ;
 -(FMTrip*) getLastTrip;
