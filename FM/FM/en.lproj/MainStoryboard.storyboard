@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8v-lG-0TS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8v-lG-0TS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--New Event View Controller - CreateEvent-->
@@ -156,7 +156,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-Pc-lpG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="olY-Yz-4Y9"/>
+                                    <constraint firstAttribute="width" constant="163" id="ZFi-8O-vTc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -165,30 +165,73 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKf-xp-y4D"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Split all?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZE-pD-vat">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Paid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGu-oX-pHl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="ben-JL-GXZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Should Pay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3T-3v-jM2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="Bi0-Nt-aXk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARt-cS-8Vx">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="a7g-VZ-759"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <constraints>
-                            <constraint firstItem="nGm-IW-622" firstAttribute="leading" secondItem="iCr-Pc-lpG" secondAttribute="leading" type="default" id="ARs-EV-o9U"/>
-                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="231" id="Cdm-LC-FiX"/>
-                            <constraint firstItem="nGm-IW-622" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="347" id="Cs9-XK-uaK"/>
-                            <constraint firstAttribute="bottom" secondItem="pyi-0U-Obb" secondAttribute="bottom" constant="323" id="MWj-oP-Zva"/>
+                            <constraint firstItem="Q3T-3v-jM2" firstAttribute="baseline" secondItem="AGu-oX-pHl" secondAttribute="baseline" type="default" id="3qe-vV-m9H"/>
+                            <constraint firstItem="tRn-QK-XKX" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="175" id="5te-Lx-34J"/>
+                            <constraint firstItem="wpb-D9-bqD" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="253" id="B7R-Ff-JWW"/>
+                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="374" id="Bvj-mX-4va"/>
+                            <constraint firstItem="Q3T-3v-jM2" firstAttribute="top" secondItem="9ZE-pD-vat" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CT4-VN-kZN"/>
+                            <constraint firstAttribute="bottom" secondItem="pyi-0U-Obb" secondAttribute="bottom" constant="105" id="F2v-c5-Bob"/>
+                            <constraint firstItem="9ZE-pD-vat" firstAttribute="leading" secondItem="TKf-xp-y4D" secondAttribute="leading" type="default" id="JTr-Br-u68"/>
+                            <constraint firstItem="tRn-QK-XKX" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="162" id="KTF-Ad-ZzE"/>
+                            <constraint firstItem="nGm-IW-622" firstAttribute="leading" secondItem="iCr-Pc-lpG" secondAttribute="leading" type="default" id="Qu6-sF-SO4"/>
+                            <constraint firstItem="ARt-cS-8Vx" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="63" id="UiH-ox-QvB"/>
                             <constraint firstItem="qEl-wH-tpZ" firstAttribute="trailing" secondItem="WgY-jp-RNs" secondAttribute="trailing" type="default" id="XOm-9Z-4id"/>
-                            <constraint firstItem="tRn-QK-XKX" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="145" id="c62-LR-vfb"/>
-                            <constraint firstItem="wpb-D9-bqD" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="351" id="cce-3D-gTx"/>
-                            <constraint firstItem="nGm-IW-622" firstAttribute="trailing" secondItem="iCr-Pc-lpG" secondAttribute="trailing" type="default" id="d8E-Yh-47G"/>
-                            <constraint firstItem="wpb-D9-bqD" firstAttribute="leading" secondItem="tRn-QK-XKX" secondAttribute="leading" type="default" id="jNR-qL-Gtv"/>
-                            <constraint firstItem="tRn-QK-XKX" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="235" id="lLC-oZ-bmV"/>
+                            <constraint firstItem="9ZE-pD-vat" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="290" id="ZZ0-aX-88Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Q3T-3v-jM2" secondAttribute="trailing" constant="102" id="Zjf-0u-KBG"/>
+                            <constraint firstAttribute="trailing" secondItem="ARt-cS-8Vx" secondAttribute="trailing" constant="45" id="atZ-66-Ffj"/>
+                            <constraint firstItem="TKf-xp-y4D" firstAttribute="centerY" secondItem="Q3T-3v-jM2" secondAttribute="centerY" type="default" id="f9g-Sp-Cqh"/>
+                            <constraint firstItem="ARt-cS-8Vx" firstAttribute="bottom" secondItem="nGm-IW-622" secondAttribute="bottom" type="default" id="gMD-kL-1E4"/>
+                            <constraint firstItem="wpb-D9-bqD" firstAttribute="centerX" secondItem="tRn-QK-XKX" secondAttribute="centerX" type="default" id="i4M-EE-oNI"/>
+                            <constraint firstItem="9ZE-pD-vat" firstAttribute="centerX" secondItem="TKf-xp-y4D" secondAttribute="centerX" type="default" id="kTW-qT-mY4"/>
+                            <constraint firstAttribute="trailing" secondItem="TKf-xp-y4D" secondAttribute="trailing" constant="26" id="mdS-ae-suF"/>
+                            <constraint firstItem="AGu-oX-pHl" firstAttribute="centerX" secondItem="nGm-IW-622" secondAttribute="centerX" type="default" id="rhb-pH-62o"/>
+                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="trailing" secondItem="nGm-IW-622" secondAttribute="trailing" type="default" id="rz3-jS-24o"/>
                             <constraint firstItem="pyi-0U-Obb" firstAttribute="centerX" secondItem="qEl-wH-tpZ" secondAttribute="centerX" type="default" id="s3D-Nj-RRC"/>
+                            <constraint firstItem="tRn-QK-XKX" firstAttribute="top" secondItem="iCr-Pc-lpG" secondAttribute="top" type="default" id="s9I-7X-0Ls"/>
                             <constraint firstItem="qEl-wH-tpZ" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" type="default" id="scK-8N-y3q"/>
                             <constraint firstItem="qEl-wH-tpZ" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" type="default" id="stl-jJ-tPU"/>
-                            <constraint firstItem="nGm-IW-622" firstAttribute="trailing" secondItem="pyi-0U-Obb" secondAttribute="trailing" type="default" id="vCQ-Mu-U7f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Transaction" id="dgb-0P-ew1"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
+                        <outlet property="catePicker" destination="ARt-cS-8Vx" id="aaH-sd-Zi6"/>
                         <outlet property="myView" destination="WgY-jp-RNs" id="UDy-O2-M4J"/>
+                        <outlet property="splitAll" destination="TKf-xp-y4D" id="U0b-KB-3fx"/>
                         <outlet property="submitButton" destination="pyi-0U-Obb" id="sDS-hM-Huy"/>
+                        <outlet property="totalCost" destination="wpb-D9-bqD" id="rjE-YO-hpr"/>
+                        <outlet property="totalCostInput" destination="nGm-IW-622" id="fM4-61-F0k"/>
+                        <outlet property="transName" destination="tRn-QK-XKX" id="E6G-ol-YeI"/>
+                        <outlet property="transNameInput" destination="iCr-Pc-lpG" id="Ejf-b5-4qf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRM-9Z-ZtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,7 +403,7 @@
                     <navigationItem key="navigationItem" title="Transaction Details" id="K9V-aL-RAS">
                         <barButtonItem key="rightBarButtonItem" title="Add Transaction" id="vYz-9B-NcN">
                             <connections>
-                                <segue destination="OBb-3C-uJf" kind="push" id="Qip-Jf-0Tq"/>
+                                <segue destination="OBb-3C-uJf" kind="push" identifier="addTrans" id="Qip-Jf-0Tq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

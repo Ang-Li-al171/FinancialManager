@@ -64,6 +64,11 @@
 - (IBAction)createNewEvent:(id)sender {
     FMViewController *rootViewController = [self.navigationController.viewControllers objectAtIndex:0];
     
+    // let the trip know
+    [rootViewController.myBrain addTripWithName:_nameText.text WithDescription:_memoText.text];
+    [[rootViewController.myBrain getLastTrip] addPeoples:_memberText.text];
+    
+    // letting the home screen know
     rootViewController.myNewEventName = _nameText.text;
     rootViewController.myNewEventMemo = _memoText.text;
     rootViewController.myNewEventMember = _memberText.text;

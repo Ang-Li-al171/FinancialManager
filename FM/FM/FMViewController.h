@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMBrain.h"
 
 @interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
@@ -16,6 +17,7 @@
 @property(nonatomic) NSString *myNewEventMemo;
 @property(nonatomic) NSString *myNewEventMember;
 @property(nonatomic) UIImage *image;
+@property(nonatomic) FMBrain *myBrain;
 
 - (IBAction)insertNewObject;
 

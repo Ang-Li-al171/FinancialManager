@@ -10,7 +10,7 @@
 #import "FMTrip.h"
 #import "FMPair.h"
 
-@interface Trip : NSObject
+@interface FMTrip : NSObject
 
 @property NSString * description;
 @property NSMutableArray *peoples;
@@ -27,5 +27,6 @@
 -(void) setPaid: (int) money WithEventIndex: (int) eventIndex WithPeopleIndex: (int) peopleIndex;
 -(void) setShouldPay: (int) money WithEventIndex: (int) eventIndex WithPeopleIndex: (int) peopleIndex;
 -(void) setEventToAverageCost:(int) eventIndex;
+-(void) addPeoples: (NSString*) peopleNames;
 @end
 

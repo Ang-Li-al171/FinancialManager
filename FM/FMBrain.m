@@ -13,19 +13,22 @@
 @synthesize trips;
 
 -(void) addTripWithName: (NSString*) tripName {
-    [trips addObject:[[Trip alloc] initWithName:tripName]];
+    [trips addObject:[[FMTrip alloc] initWithName:tripName]];
 }
 -(void) addTripWithName:(NSString *)tripName WithDescription: (NSString*) tripDescp {
-    [trips addObject:[[Trip alloc]initWithName:tripName WithDescription:tripDescp]];
+    [trips addObject:[[FMTrip alloc]initWithName:tripName WithDescription:tripDescp]];
 }
 
--(Trip*) getTrip: (int) tripIndex {
+-(FMTrip*) getTrip: (int) tripIndex {
     return [trips objectAtIndex:tripIndex];
+}
+-(FMTrip*) getLastTrip {
+    return [trips objectAtIndex:trips.count-1];
 }
 
 -(NSMutableArray*) getTripNames{
     NSMutableArray* names = [[NSMutableArray alloc]init];
-    for(Trip *t in trips){
+    for(FMTrip *t in trips){
         [names addObject:t.name];
     }
     return names;

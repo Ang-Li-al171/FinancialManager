@@ -10,6 +10,9 @@
 #import "CustomHomeCell.h"
 #import "FMCollection.h"
 
+#import "FMBrain.h"
+#import "FMTrip.h"
+
 @interface FMViewController ()
 {
     NSMutableArray *TitleLabel;
@@ -20,7 +23,7 @@
 @end
 
 @implementation FMViewController
-@synthesize myHomeTableView;
+@synthesize myHomeTableView, myBrain;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,19 +42,26 @@
 	
     NSLog(@"did go here");
     
+    self.myBrain = [[FMBrain alloc] initWithFile:@"/User/angli/Desktop/test.plist"];
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
     
     TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Porto Rico", @"San Diego", nil];
     DescriLabel = [[NSMutableArray alloc] initWithObjects:@"A lot of fun", @"Spring Break 2013", nil];
-    _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
+    _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     FMCollection *fm = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
     FMCollection *fmTwo = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
     
-    //FMCollection *transaction = [[FMCollection alloc] initWithNibName:nil bundle:nil];
+    [self.myBrain addTripWithName:TitleLabel[0] WithDescription:DescriLabel[0]];
+    [fm initWithTripPtr: [self.myBrain getLastTrip]];
+    [self.myBrain addTripWithName:TitleLabel[1] WithDescription:DescriLabel[1]];
+    [fmTwo initWithTripPtr: [self.myBrain getLastTrip]];
+    
+    [fm.myTrip addPeoples:@"Ang Li, jjjjack, oooops"];
+    [fmTwo.myTrip addPeoples:@"Monsters, Cars, Nemo"];
     TransactionPage = [[NSMutableArray alloc] initWithObjects:fm, fmTwo, nil];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -132,8 +142,10 @@
     }
     [DescriLabel insertObject:_myNewEventMemo atIndex:0];
     
+    // create a new CollectionViewController and link it with trip
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     FMCollection *fm = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
+    [fm initWithTripPtr:[self.myBrain getLastTrip]];
     [TransactionPage insertObject:fm atIndex:0];
     
     //add to table view
@@ -145,9 +157,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"index path: %d", indexPath.row);
+    //NSLog(@"index path: %d", indexPath.row);
     FMCollection* page = [TransactionPage objectAtIndex:indexPath.row];
-    NSLog(@"array size: %d", TransactionPage.count);
+    //NSLog(@"array size: %d", TransactionPage.count);
     [self.navigationController pushViewController:page animated:YES];
 }
 
