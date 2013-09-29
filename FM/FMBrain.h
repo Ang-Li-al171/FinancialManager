@@ -15,8 +15,9 @@
 
 -(void) addTripWithName: (NSString*) name ;
 -(void) addTripWithName:(NSString *)tripName WithDescription: (NSString*) tripDescp;
+-(void) deleteTripWithIndex: (int) index;
 -(NSMutableArray*) getTripNames;
--(Trip*) getTrip: (int) tripIndex ;
+-(FMTrip*) getTrip: (int) tripIndex ;
 -(void) encodeToFile:(NSString*) filePath;
 -(id) initWithFile:(NSString*) filePath;
 @end

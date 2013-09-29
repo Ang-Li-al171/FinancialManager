@@ -50,6 +50,11 @@
     [budgetTable addObject: newEventEntry];
 }
 
+-(void) deleteEvent: (int) index{
+    [events removeObjectAtIndex:index];
+    [budgetTable removeObjectAtIndex:index];
+}
+
 -(NSMutableArray*) getEventArray{
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObjectsFromArray:events];
@@ -99,7 +104,6 @@
         p.shouldPay = sum/peoples.count;
     }
 }
-
 
 -(void) encodeWithCoder: (NSCoder*) coder {
     [coder encodeObject:name forKey:@"Name"];

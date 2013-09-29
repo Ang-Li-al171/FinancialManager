@@ -23,6 +23,7 @@
 -(void) addPeople: (NSString*) peopleName;
 -(void) addPeoples: (NSString*) peopleNames;
 -(void) addEvent:(NSString*) eventName;
+-(void) deleteEvent: (int) index;
 -(NSMutableArray*) getEventArray;
 -(NSMutableArray*) getNameEntrys;
 -(void) setPaid: (int) money WithEventIndex: (int) eventIndex WithPeopleIndex: (int) peopleIndex;
