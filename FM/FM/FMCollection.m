@@ -125,10 +125,11 @@
     [self.collectionView reloadData];
 }
 
+//brings to the details page
 - (void)pressTransButton:(id)sender{
     menuButton *myself = (menuButton *) sender;
-    //NSLog(@"there are %d buttons in total, %d controllers", self.myTransButtons.count, self.myTransControllers.count);
     TransController* page = [self.myTransControllers objectAtIndex:myself.myRowNum-1];
+    [page setSecondTime: true];
     [self.navigationController pushViewController:page animated:YES];
 }
 
@@ -139,7 +140,7 @@
     {
         // Get reference to the destination view controller
         TransController *vc = [segue destinationViewController];
-        
+        [vc setSecondTime:false];
         // Pass any objects to the view controller here, like...
         [vc setPeopleList:self.myTrip.peoples];
     }

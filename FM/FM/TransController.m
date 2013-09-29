@@ -24,6 +24,10 @@
     return self;
 }
 
+- (void) setSecondTime:(bool)isRepeated{
+    self.repeated = isRepeated;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -107,7 +111,13 @@
     
     int row = [self.catePicker selectedRowInComponent:0];
     
-    [collectionController.myTrip addEvent: [self switchCate:row]];
+    // if this is a new event, add event to controller.mytrip and set myrow.
+    if (!self.repeated){
+        [collectionController.myTrip addEvent: [self switchCate:row]];
+        self.myRow = [collectionController.myTrip getEventArray].count;
+    }else{
+        [collectionController.myTrip.events replaceObjectAtIndex:self.myRow-2 withObject:[self switchCate:row]];
+    }
     
     int shouldPay=0;
     if (self.splitAll.isOn){
@@ -115,15 +125,18 @@
     }
     for (int i=0; i<self.myPeoples.count;i++){
         UITextField *field = (UITextField*)([self.myTextFields objectAtIndex:i]);
-        [collectionController.myTrip setPaid: [field.text intValue] WithEventIndex:[collectionController.myTrip getEventArray].count-2 WithPeopleIndex:i];
+        [collectionController.myTrip setPaid: [field.text intValue] WithEventIndex:self.myRow-2 WithPeopleIndex:i];
         if (!self.splitAll.isOn){
             UITextField *shouldField = (UITextField*)([self.myShouldPayFields objectAtIndex:i]);
             shouldPay = [shouldField.text intValue];
         }
-        [collectionController.myTrip setShouldPay:shouldPay WithEventIndex:[collectionController.myTrip getEventArray].count-2 WithPeopleIndex:i];
+        [collectionController.myTrip setShouldPay:shouldPay WithEventIndex:self.myRow-2 WithPeopleIndex:i];
     }
     
-    [collectionController.myTransControllers addObject: self];
+    // if this is a new event, add it to list of transControllers.
+    if (!self.repeated){
+        [collectionController.myTransControllers addObject: self];
+    }
     [collectionController refresh];
     [self.navigationController popViewControllerAnimated:YES];
 }
