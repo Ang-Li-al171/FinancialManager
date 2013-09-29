@@ -59,7 +59,7 @@
                                 CGRectMake(300, 380+350*i/self.myPeoples.count, 150, 30)];
         textIn.backgroundColor = [UIColor whiteColor];
         textIn.textColor = [UIColor blackColor];
-        textIn.textAlignment = UITextAlignmentCenter;
+        textIn.textAlignment = NSTextAlignmentCenter;
         [textIn setBorderStyle:UITextBorderStyleRoundedRect];
         [self.view addSubview:textIn];
         [self.myTextFields addObject:textIn];
@@ -68,7 +68,7 @@
                                 CGRectMake(500, 380+350*i/self.myPeoples.count, 150, 30)];
         textShouldPay.backgroundColor = [UIColor whiteColor];
         textShouldPay.textColor = [UIColor blackColor];
-        textShouldPay.textAlignment = UITextAlignmentCenter;
+        textShouldPay.textAlignment = NSTextAlignmentCenter;
         [textShouldPay setBorderStyle:UITextBorderStyleRoundedRect];
         [self.view addSubview:textShouldPay];
         [self.myShouldPayFields addObject:textShouldPay];
