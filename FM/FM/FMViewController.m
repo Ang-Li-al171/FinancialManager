@@ -30,7 +30,7 @@
 
 @implementation UIColor (MyProject)
 
-+(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:0.8 green:0.6 blue:0.5 alpha:1.0]; }
++(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:1 green:0.55 blue:0 alpha:1.0]; }
 
 @end
 
@@ -57,7 +57,7 @@
     self.myHomeTableView.delegate = self;
     
     TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Best Event", @"Sample Event", nil];
-    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"Sherry loves Candy Crush, Ang loves to sleep, Yaqi loves to eat", @"Big Byte Challenge is Awesome", nil];
+    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"Sherry->Candy Crush, Ang->sleep, Yaqi->eat", @"Big Byte Challenge is Awesome", nil];
     
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
