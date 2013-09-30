@@ -11,6 +11,7 @@
 #import "IconButton.h"
 #import "CollectionFlowLayout.h"
 #import "FMTrip.h"
+#import "FMBrain.h"
 #import "TransController.h"
 #import "menuButton.h"
 #import <QuartzCore/QuartzCore.h>
@@ -82,7 +83,6 @@
                                    scope: SpeechOAuthScope()]
      fetchTo: ^(NSString* token, NSError* error) {
          if (token) {
-             NSLog(@"correct token");
              speechService.bearerAuthToken = token;
              speakButton.enabled = YES;
          }
@@ -193,10 +193,21 @@
     
     [self setFlowAndItemSize];
     
+
     myDiscussionBoard = [[UITextView alloc]initWithFrame:CGRectMake(50, 610, 660, 300)];
     myDiscussionBoard.backgroundColor = [UIColor grayColor];
     myDiscussionBoard.textColor = [UIColor whiteColor];
     [myDiscussionBoard setFont:[UIFont boldSystemFontOfSize:18]];
+    
+    // initialize all transControllers
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    for (int i=0; i<self.myTrip.events.count; i++){
+        TransController *tc = [sb instantiateViewControllerWithIdentifier:@"TransController"];
+        [tc setPeopleList:self.myTrip.peoples];
+        tc.myRow = i+2;
+        [self.myTransControllers addObject:tc];
+    }
     myDiscussionBoard.editable = FALSE;
     myDiscussionBoard.scrollEnabled = YES;
     [self.collectionView addSubview:myDiscussionBoard];
@@ -244,6 +255,7 @@
     self.numItems = [self.myTrip getEventArray].count;
     self.myTransButtons = [[NSMutableArray alloc] init];
     [self.collectionView reloadData];
+    [self.myTrip.brain encodeToFile:@"/Users/angli/Desktop/data.plist"];
 }
 
 //brings to the details page

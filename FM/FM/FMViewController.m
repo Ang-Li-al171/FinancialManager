@@ -52,27 +52,31 @@
 {
     [super viewDidLoad];
     
-    self.myBrain = [[FMBrain alloc] initWithFile:@"/User/angli/Desktop/data.plist"];
+    self.myBrain = [[FMBrain alloc] initWithFile:@"/Users/angli/Desktop/data.plist"];
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
-    
-    TitleLabel = [[NSMutableArray alloc] initWithObjects:@"Best Event", @"Sample Event", nil];
-    DescriLabel = [[NSMutableArray alloc] initWithObjects:@"Sherry->Candy Crush, Ang->sleep, Yaqi->eat", @"Big Byte Challenge is Awesome", nil];
     
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    FMCollection *fm = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
-    FMCollection *fmTwo = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
+    NSMutableArray *tripList = [[NSMutableArray alloc] init];
     
-    [self.myBrain addTripWithName:TitleLabel[0] WithDescription:DescriLabel[0]];
-    [fm initWithTripPtr: [self.myBrain getLastTrip]];
-    [self.myBrain addTripWithName:TitleLabel[1] WithDescription:DescriLabel[1]];
-    [fmTwo initWithTripPtr: [self.myBrain getLastTrip]];
+    TitleLabel = [[NSMutableArray alloc]init];
+    DescriLabel = [[NSMutableArray alloc]init];
     
-    [fm.myTrip addPeoples:@"Ang Li, jjjjack, oooops"];
-    [fmTwo.myTrip addPeoples:@"Monsters, Cars, Nemo"];
-    TransactionPage = [[NSMutableArray alloc] initWithObjects:fm, fmTwo, nil];
+    // if trips present in data files
+    if (self.myBrain.trips.count > 0){
+        for (int i=0; i<(self.myBrain.trips.count); i++){
+            FMCollection *fm = [sb instantiateViewControllerWithIdentifier:@"FMCollection"];
+            FMTrip *currentTrip = [self.myBrain getTrip:i];
+            currentTrip.brain = self.myBrain;
+            [fm initWithTripPtr: currentTrip];
+            [tripList addObject:fm];
+            [TitleLabel addObject: currentTrip.name];
+            [DescriLabel addObject:currentTrip.description];
+        }
+    }
+    TransactionPage = [[NSMutableArray alloc] initWithArray:tripList];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToNewEventPage)];
@@ -92,7 +96,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return TitleLabel.count;
+    return TransactionPage.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,7 +114,7 @@
     NSString *updateTitle = [TitleLabel objectAtIndex:indexPath.row];
     Cell.TitleLabel.attributedText = [[NSAttributedString alloc] initWithString:updateTitle attributes:attributes];
     Cell.DescriLabel.text = [DescriLabel objectAtIndex:indexPath.row];
-
+    
     Cell.eventImageView.image = _image;
     Cell.eventImageView.contentMode = UIViewContentModeScaleAspectFill;
     _image = [UIImage imageNamed:@"defaultEventPic.png"];
@@ -118,7 +122,6 @@
     return Cell;
 }
 
-//Editing cells
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
@@ -131,16 +134,15 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
+        [myBrain deleteTripWithIndex:indexPath.row];
+        [myBrain encodeToFile:@"/Users/angli/Desktop/data.plist"];
         [TitleLabel removeObjectAtIndex:indexPath.row];
         [DescriLabel removeObjectAtIndex:indexPath.row];
         [TransactionPage removeObjectAtIndex:indexPath.row];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-    
 }
-
 
 //Add new cells
 - (void)goToNewEventPage {
@@ -173,10 +175,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    //NSLog(@"index path: %d", indexPath.row);
     FMCollection* page = [TransactionPage objectAtIndex:indexPath.row];
-    //NSLog(@"array size: %d", TransactionPage.count);
     [self.navigationController pushViewController:page animated:YES];
     [myHomeTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
