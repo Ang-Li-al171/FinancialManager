@@ -11,6 +11,7 @@
 #import "IconButton.h"
 #import "CollectionFlowLayout.h"
 #import "FMTrip.h"
+#import "FMBrain.h"
 #import "TransController.h"
 #import "menuButton.h"
 #import <QuartzCore/QuartzCore.h>
@@ -138,6 +139,7 @@
     self.numItems = [self.myTrip getEventArray].count;
     self.myTransButtons = [[NSMutableArray alloc] init];
     [self.collectionView reloadData];
+    [self.myTrip.brain encodeToFile:@"/Users/angli/Desktop/data.plist"];
 }
 
 //brings to the details page
