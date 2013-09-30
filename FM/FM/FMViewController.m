@@ -30,7 +30,7 @@
 
 @implementation UIColor (MyProject)
 
-+(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:1 green:0.55 blue:0 alpha:1.0]; }
++(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:0.95 green:0.69 blue:0.41 alpha:1.0]; }
 
 @end
 

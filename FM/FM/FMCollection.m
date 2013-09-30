@@ -36,7 +36,7 @@
 
 @implementation UIColor (MyProject)
 
-+(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:1 green:0.55 blue:0 alpha:1.0]; }
++(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:0.95 green:0.69 blue:0.41 alpha:1.0]; }
 
 @end
 
@@ -193,33 +193,42 @@
     
     [self setFlowAndItemSize];
     
-    myDiscussionBoard = [[UITextView alloc]initWithFrame:CGRectMake(50, 400, 660, 300)];
-    myDiscussionBoard.backgroundColor = [UIColor colorForSomePurpose];
+    myDiscussionBoard = [[UITextView alloc]initWithFrame:CGRectMake(50, 610, 660, 300)];
+    myDiscussionBoard.backgroundColor = [UIColor grayColor];
+    myDiscussionBoard.textColor = [UIColor whiteColor];
+    [myDiscussionBoard setFont:[UIFont boldSystemFontOfSize:18]];
     myDiscussionBoard.editable = FALSE;
     myDiscussionBoard.scrollEnabled = YES;
     [self.collectionView addSubview:myDiscussionBoard];
     
-    mySpeechField = [[UITextField alloc] initWithFrame:CGRectMake(50, 360, 660, 40)];
+    mySpeechField = [[UITextField alloc] initWithFrame:CGRectMake(50, 570, 660, 40)];
     mySpeechField.borderStyle = UITextBorderStyleRoundedRect;
+    mySpeechField.backgroundColor = [UIColor whiteColor];
     mySpeechField.font = [UIFont systemFontOfSize:20];
     mySpeechField.textColor = [UIColor blackColor];
     [self.view addSubview:mySpeechField];
     
     speakButton = [UIButton buttonWithType:(UIButtonTypeRoundedRect)];
-    [speakButton setFrame:CGRectMake(20, 300, 100, 50)];
+    [speakButton setFrame:CGRectMake(675, 570, 40, 40)];
     [speakButton addTarget:self
                     action:@selector(listen)
           forControlEvents:UIControlEventTouchDown];
+    UIImage *buttonImage = [UIImage imageNamed:@"mic.png"];
+    [speakButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [speakButton setImage:buttonImage forState:UIControlStateNormal];
     [speakButton setTitle:@"Hold To Speak" forState:UIControlStateNormal];
     [self.view addSubview:speakButton];
     
     
     sendButton = [UIButton buttonWithType:(UIButtonTypeRoundedRect)];
-    [sendButton setFrame:CGRectMake(400, 300, 100, 50)];
+    [sendButton setFrame:CGRectMake(635, 850, 65, 50)];
     [sendButton addTarget:self
                     action:@selector(sendMessage)
           forControlEvents:UIControlEventTouchDown];
     [sendButton setTitle:@"Send!" forState:UIControlStateNormal];
+    UIImage *sendImage = [UIImage imageNamed:@"send.png"];
+    [sendButton setBackgroundImage:sendImage forState:UIControlStateNormal];
+    [sendButton setImage:sendImage forState:UIControlStateNormal];
     [self.view addSubview:sendButton];
     [self prepareSpeech];
 }

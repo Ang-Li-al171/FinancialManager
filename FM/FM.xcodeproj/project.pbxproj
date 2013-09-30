@@ -25,6 +25,8 @@
 		4B451E9A17F6339800A9F0BE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B451E9817F6339800A9F0BE /* MainStoryboard.storyboard */; };
 		4B451E9D17F6339800A9F0BE /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451E9C17F6339800A9F0BE /* FMViewController.m */; };
 		4B451EA517F66C6A00A9F0BE /* CustomHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */; };
+		4B451FD717F90D670021AD5C /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B451FD617F90D670021AD5C /* send.png */; };
+		4B451FD917F9122F0021AD5C /* collectionBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B451FD817F9122F0021AD5C /* collectionBG.jpg */; };
 		4B51D0F617F6A2480017C4D0 /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B51D0F517F6A2480017C4D0 /* pic.jpg */; };
 		4B51D0FF17F6AE790017C4D0 /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */; };
 		4B607D2117F761580070792E /* defaultPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B607D2017F761580070792E /* defaultPic.jpg */; };
@@ -38,7 +40,6 @@
 		4BD08C3617F7B040006C46BA /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C3417F7B040006C46BA /* ATTSpeechKit.a */; };
 		4BD08C3917F7B8E7006C46BA /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */; };
 		4BD08C3C17F7B99D006C46BA /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */; };
-		BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 		BCCC258017F74CE500531A9E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC257F17F74CE500531A9E /* TransController.m */; };
 		BCCC258317F76E0700531A9E /* CollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC258217F76E0700531A9E /* CollectionFlowLayout.m */; };
@@ -81,6 +82,8 @@
 		4B451E9C17F6339800A9F0BE /* FMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		4B451EA317F66C6A00A9F0BE /* CustomHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHomeCell.h; sourceTree = "<group>"; };
 		4B451EA417F66C6A00A9F0BE /* CustomHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHomeCell.m; sourceTree = "<group>"; };
+		4B451FD617F90D670021AD5C /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
+		4B451FD817F9122F0021AD5C /* collectionBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = collectionBG.jpg; sourceTree = "<group>"; };
 		4B51D0F517F6A2480017C4D0 /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
 		4B51D0FD17F6AE790017C4D0 /* NewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewEventViewController.h; path = ../NewEventViewController.h; sourceTree = "<group>"; };
 		4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventViewController.m; path = ../NewEventViewController.m; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 		4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechConfig.m; path = ATTSpeechKit/SpeechConfig.m; sourceTree = SOURCE_ROOT; };
 		4BD08C3A17F7B99D006C46BA /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
 		4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
-		BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = collectionBG.jpg; sourceTree = "<group>"; };
 		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
 		BCCC257E17F74CE500531A9E /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
@@ -170,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD4807D17F8C858007BEE41 /* transBG.jpg */,
-				BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */,
+				4B451FD817F9122F0021AD5C /* collectionBG.jpg */,
 				4B451E8F17F6339800A9F0BE /* FMAppDelegate.h */,
 				4B451E9017F6339800A9F0BE /* FMAppDelegate.m */,
 				4B451E9B17F6339800A9F0BE /* FMViewController.h */,
@@ -185,6 +187,7 @@
 				0462F8F317F79CE9005FE399 /* FMPair.m */,
 				0462F8ED17F79C1B005FE399 /* FMTrip.m */,
 				0462F8EA17F79B29005FE399 /* FMBrain.m */,
+				4B451FD617F90D670021AD5C /* send.png */,
 				4B9CC46B17F8A4390094DBAF /* bigbytelogo.png */,
 				4B9CC46917F8996D0094DBAF /* mic.png */,
 				BCCC258417F7760700531A9E /* restaurant_icon_6060.png */,
@@ -308,9 +311,10 @@
 				4B607D2317F763ED0070792E /* defaultEventPic.png in Resources */,
 				4B9CC46A17F8996D0094DBAF /* mic.png in Resources */,
 				4B9CC46C17F8A4390094DBAF /* bigbytelogo.png in Resources */,
-				BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */,
 				BCD4807E17F8C859007BEE41 /* transBG.jpg in Resources */,
 				4B05DBA317F8CAD5002B2847 /* CreateLogo.png in Resources */,
+				4B451FD717F90D670021AD5C /* send.png in Resources */,
+				4B451FD917F9122F0021AD5C /* collectionBG.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
