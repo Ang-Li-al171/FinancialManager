@@ -194,6 +194,17 @@
     
     [self setFlowAndItemSize];
     
+    // initialize all transControllers
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    for (int i=0; i<self.myTrip.events.count; i++){
+        NSLog(@"I'm in the for loop for i is %d", i);
+        TransController *tc = [sb instantiateViewControllerWithIdentifier:@"TransController"];
+        [tc setPeopleList:self.myTrip.peoples];
+        tc.myRow = i+2;
+        [self.myTransControllers addObject:tc];
+    }
+    
     myDiscussionBoard = [[UITextView alloc]initWithFrame:CGRectMake(50, 400, 660, 300)];
     myDiscussionBoard.backgroundColor = [UIColor colorForSomePurpose];
     myDiscussionBoard.editable = FALSE;
