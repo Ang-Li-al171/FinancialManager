@@ -38,6 +38,7 @@
 		4BD08C3617F7B040006C46BA /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD08C3417F7B040006C46BA /* ATTSpeechKit.a */; };
 		4BD08C3917F7B8E7006C46BA /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */; };
 		4BD08C3C17F7B99D006C46BA /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */; };
+		BC281FEC17F9188600D041B1 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC281FEB17F9188600D041B1 /* appIcon.png */; };
 		BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */; };
 		BC7B46A517F6804D00DD5244 /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B46A417F6804D00DD5244 /* IconButton.m */; };
 		BCCC258017F74CE500531A9E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC257F17F74CE500531A9E /* TransController.m */; };
@@ -98,6 +99,7 @@
 		4BD08C3817F7B8E7006C46BA /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechConfig.m; path = ATTSpeechKit/SpeechConfig.m; sourceTree = SOURCE_ROOT; };
 		4BD08C3A17F7B99D006C46BA /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
 		4BD08C3B17F7B99D006C46BA /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
+		BC281FEB17F9188600D041B1 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		BC6FE1EA17F8ACD600E77AD2 /* collectionBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = collectionBG.jpg; sourceTree = "<group>"; };
 		BC7B46A317F6804D00DD5244 /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
 		BC7B46A417F6804D00DD5244 /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		4B451E7417F6339800A9F0BE = {
 			isa = PBXGroup;
 			children = (
+				BC281FEB17F9188600D041B1 /* appIcon.png */,
 				4BD08C3317F7B040006C46BA /* ATTSpeechKit */,
 				4BD08C3117F7AAB5006C46BA /* Security.framework */,
 				4BD08C2F17F7AAAF006C46BA /* CFNetwork.framework */,
@@ -311,6 +314,7 @@
 				BC6FE1EB17F8ACD600E77AD2 /* collectionBG.jpg in Resources */,
 				BCD4807E17F8C859007BEE41 /* transBG.jpg in Resources */,
 				4B05DBA317F8CAD5002B2847 /* CreateLogo.png in Resources */,
+				BC281FEC17F9188600D041B1 /* appIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
