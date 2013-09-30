@@ -39,7 +39,6 @@
 }
 
 -(void) encodeToFile:(NSString*) filePath{
-    NSLog(@"wriiten to file at %@", filePath);
     [NSKeyedArchiver archiveRootObject:trips toFile:filePath];
 }
 -(id) initWithFile:(NSString*) filePath{
