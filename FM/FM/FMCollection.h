@@ -10,12 +10,14 @@
 #import "FMTrip.h"
 #import "TransController.h"
 #import "menuButton.h"
+#import "ATTSpeechKit.h"
 
 
-@interface FMCollection : UICollectionViewController
+@interface FMCollection : UICollectionViewController <ATTSpeechServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *naviBarCollection;
 
+@property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (strong, nonatomic) UIImage * DEFAULT_TRANS_PIC;
 @property (strong, nonatomic) UIImage * DINING;
 @property (strong, nonatomic) UIImage * HOTEL;

@@ -16,7 +16,28 @@
 #import "menuButton.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface FMCollection ()
+#import "ATTSpeechKit.h"
+#import "SpeechConfig.h"
+#import "SpeechAuth.h"
+
+@interface FMCollection () {
+    UIButton *speakButton;
+    UITextField *mySpeechField;
+    UITextView *myDiscussionBoard;
+    UIButton *sendButton;
+}
+- (void) speechAuthFailed: (NSError*) error;
+@end
+
+@interface UIColor (MyProject)
+
++(UIColor *) colorForSomePurpose;
+
+@end
+
+@implementation UIColor (MyProject)
+
++(UIColor *) colorForSomePurpose { return [UIColor colorWithRed:1 green:0.55 blue:0 alpha:1.0]; }
 
 @end
 
@@ -31,10 +52,56 @@
     return self;
 }
 
+
+// Initialize SpeechKit for this app.
+- (void) prepareSpeech
+{
+    // Access the SpeechKit singleton.
+    ATTSpeechService* speechService = [ATTSpeechService sharedSpeechService];
+    
+    // Point to the SpeechToText API.
+    speechService.recognitionURL = SpeechServiceUrl();
+    
+    // Hook ourselves up as a delegate so we can get called back with the response.
+    speechService.delegate = self;
+    
+    // Use default speech UI.
+    speechService.showUI = YES;
+    
+    // Choose the speech recognition package.
+    speechService.speechContext = @"sms";
+    
+    // Enable the Speex codec, which provides better speech recognition accuracy.
+    speechService.audioFormat = ATTSKAudioFormatSpeex_WB;
+    
+    // Start the OAuth background operation, disabling the Talk button until
+    // it's done.
+    speakButton.enabled = NO;
+    [[SpeechAuth authenticatorForService: SpeechOAuthUrl()
+                                  withId: @"6utcxczquelrylmo347yaxkyogd4tohw"
+                                  secret: @"jyetzfmrtcyyxilsvj76gqh9ucpofsov"
+                                   scope: SpeechOAuthScope()]
+     fetchTo: ^(NSString* token, NSError* error) {
+         if (token) {
+             NSLog(@"correct token");
+             speechService.bearerAuthToken = token;
+             speakButton.enabled = YES;
+         }
+         else
+             [self speechAuthFailed: error];
+     }];
+    
+    // Wake the audio components so there is minimal delay on the first request.
+    [speechService prepare];
+}
+
+
+
 - (void)initWithTripPtr:(FMTrip *)tripPtr{
     self.myTrip = tripPtr;
     self.myTransButtons = [[NSMutableArray alloc] init];
     self.myTransControllers = [[NSMutableArray alloc] init];
+   
 }
 
 //define size for each cell
@@ -126,6 +193,36 @@
     self.numItems = [self.myTrip getEventArray].count;
     
     [self setFlowAndItemSize];
+    
+    myDiscussionBoard = [[UITextView alloc]initWithFrame:CGRectMake(50, 400, 660, 300)];
+    myDiscussionBoard.backgroundColor = [UIColor colorForSomePurpose];
+    myDiscussionBoard.editable = FALSE;
+    myDiscussionBoard.scrollEnabled = YES;
+    [self.collectionView addSubview:myDiscussionBoard];
+    
+    mySpeechField = [[UITextField alloc] initWithFrame:CGRectMake(50, 360, 660, 40)];
+    mySpeechField.borderStyle = UITextBorderStyleRoundedRect;
+    mySpeechField.font = [UIFont systemFontOfSize:20];
+    mySpeechField.textColor = [UIColor blackColor];
+    [self.view addSubview:mySpeechField];
+    
+    speakButton = [UIButton buttonWithType:(UIButtonTypeRoundedRect)];
+    [speakButton setFrame:CGRectMake(20, 300, 100, 50)];
+    [speakButton addTarget:self
+                    action:@selector(listen)
+          forControlEvents:UIControlEventTouchDown];
+    [speakButton setTitle:@"Hold To Speak" forState:UIControlStateNormal];
+    [self.view addSubview:speakButton];
+    
+    
+    sendButton = [UIButton buttonWithType:(UIButtonTypeRoundedRect)];
+    [sendButton setFrame:CGRectMake(400, 300, 100, 50)];
+    [sendButton addTarget:self
+                    action:@selector(sendMessage)
+          forControlEvents:UIControlEventTouchDown];
+    [sendButton setTitle:@"Send!" forState:UIControlStateNormal];
+    [self.view addSubview:sendButton];
+    [self prepareSpeech];
 }
 
 - (void)didReceiveMemoryWarning
@@ -179,5 +276,104 @@
         pic = 4;
     return pic;
 }
+
+- (IBAction)sendMessage {
+    NSString *message = mySpeechField.text;
+    
+    NSString *originalMessage = myDiscussionBoard.text;
+    if (!originalMessage) {
+        NSString *updatedMessage = message;
+        [myDiscussionBoard setText:updatedMessage];
+    } else {
+        NSString *updatedMessage = [NSString stringWithFormat:@"%@\n%@", originalMessage, message];
+        [myDiscussionBoard setText:updatedMessage];
+    }
+    mySpeechField.text = @"";
+}
+
+
+//listening to speech
+
+- (IBAction)listen {
+    NSLog(@"Starting speech request");
+    
+    // Start listening via the microphone.
+    ATTSpeechService* speechService = [ATTSpeechService sharedSpeechService];
+    
+    [speechService startListening];
+}
+
+- (void) handleRecognition: (NSString*) recognizedText
+{
+    // Display the recognized text.
+    [mySpeechField setText:recognizedText];
+    
+}
+
+- (void) speechServiceSucceeded: (ATTSpeechService*) speechService
+{
+    NSLog(@"Speech service succeeded");
+    
+    // Extract the needed data from the SpeechService object:
+    // For raw bytes, read speechService.responseData.
+    // For a JSON tree, read speechService.responseDictionary.
+    // For the n-best ASR strings, use speechService.responseStrings.
+    
+    // In this example, use the ASR strings.
+    // There can be 0 strings, 1 empty string, or 1 non-empty string.
+    // Display the recognized text in the interface is it's non-empty,
+    // otherwise have the user try again.
+    NSArray* nbest = speechService.responseStrings;
+    NSString* recognizedText = @"";
+    if (nbest != nil && nbest.count > 0)
+        recognizedText = [nbest objectAtIndex: 0];
+    if (recognizedText.length) { // non-empty?
+        [self handleRecognition: recognizedText];
+    }
+    else {
+        UIAlertView* alert =
+        [[UIAlertView alloc] initWithTitle: @"Didn't recognize speech"
+                                   message: @"Please try again."
+                                  delegate: self
+                         cancelButtonTitle: @"OK"
+                         otherButtonTitles: nil];
+        [alert show];
+    }
+}
+
+- (void) speechService: (ATTSpeechService*) speechService
+       failedWithError: (NSError*) error
+{
+    if ([error.domain isEqualToString: ATTSpeechServiceErrorDomain]
+        && (error.code == ATTSpeechServiceErrorCodeCanceledByUser)) {
+        NSLog(@"Speech service canceled");
+        // Nothing to do in this case
+        return;
+    }
+    NSLog(@"Speech service had an error: %@", error);
+    
+    UIAlertView* alert =
+    [[UIAlertView alloc] initWithTitle: @"An error occurred"
+                               message: @"Please try again later."
+                              delegate: self
+                     cancelButtonTitle: @"OK"
+                     otherButtonTitles: nil];
+    [alert show];
+}
+
+/* The SpeechAuth authentication failed. */
+- (void) speechAuthFailed: (NSError*) error
+{
+    NSLog(@"OAuth error: %@", error);
+    UIAlertView* alert =
+    [[UIAlertView alloc] initWithTitle: @"Speech Unavailable"
+                               message: @"This app was rejected by the speech service.  Contact the developer for an update."
+                              delegate: self
+                     cancelButtonTitle: @"OK"
+                     otherButtonTitles: nil];
+    [alert show];
+}
+
+
 
 @end

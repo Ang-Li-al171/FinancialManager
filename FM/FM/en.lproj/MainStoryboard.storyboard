@@ -88,6 +88,7 @@
                                             <constraint firstAttribute="width" constant="415" id="XsQ-fU-NFB"/>
                                             <constraint firstAttribute="height" constant="33" id="bZn-K1-DwP"/>
                                         </constraints>
+                                        <color key="textColor" red="0.98431378599999997" green="0.95294123890000004" blue="0.90980398650000005" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -143,7 +144,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80088739809782605" green="0.79143210419809884" blue="0.77026877604524824" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.98431378599999997" green="0.95294123890000004" blue="0.90980398650000005" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="hMF-IP-KsG" secondAttribute="bottom" constant="54" id="0ZN-iK-pJz"/>
                                     <constraint firstItem="hMF-IP-KsG" firstAttribute="centerX" secondItem="pBg-dj-Y6O" secondAttribute="centerX" type="default" id="3Xf-bc-ON1"/>
@@ -403,11 +404,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="elP-OM-c5G" firstAttribute="centerY" secondItem="uSM-fa-PEL" secondAttribute="centerY" type="default" id="91N-50-Lw8"/>
                                             <constraint firstItem="A9d-Ep-n9a" firstAttribute="trailing" secondItem="uSM-fa-PEL" secondAttribute="trailing" type="default" id="JE3-GJ-xAu"/>
-                                            <constraint firstItem="elP-OM-c5G" firstAttribute="leading" secondItem="uSM-fa-PEL" secondAttribute="leading" constant="13" id="JV8-I3-ces"/>
                                             <constraint firstAttribute="bottom" secondItem="A9d-Ep-n9a" secondAttribute="bottom" constant="14" id="Pfe-7z-T1l"/>
                                             <constraint firstItem="SHY-Fi-qUG" firstAttribute="top" secondItem="uSM-fa-PEL" secondAttribute="top" constant="20" type="default" id="Tbt-12-sqy"/>
-                                            <constraint firstItem="elP-OM-c5G" firstAttribute="top" secondItem="uSM-fa-PEL" secondAttribute="top" constant="8" id="mmA-en-NEy"/>
+                                            <constraint firstItem="elP-OM-c5G" firstAttribute="leading" secondItem="uSM-fa-PEL" secondAttribute="leading" constant="47" id="uui-xq-obG"/>
                                             <constraint firstItem="SHY-Fi-qUG" firstAttribute="leading" secondItem="uSM-fa-PEL" secondAttribute="leading" constant="155" id="wc0-WF-2fh"/>
                                         </constraints>
                                         <connections>
@@ -566,6 +567,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
+                        <outlet property="myCollectionView" destination="sLA-9N-Y2h" id="WJC-lV-0yh"/>
                         <outlet property="naviBarCollection" destination="K9V-aL-RAS" id="0yJ-ut-qNb"/>
                     </connections>
                 </collectionViewController>
@@ -622,6 +624,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCollection.h"/>
             <relationships>
                 <relationship kind="action" name="setFlowAndItemSize"/>
+                <relationship kind="outlet" name="myCollectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="naviBarCollection" candidateClass="UINavigationItem"/>
             </relationships>
         </class>
