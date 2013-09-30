@@ -183,4 +183,19 @@
 }
 
 
+- (IBAction)NAME:(id)sender {
+    NSString *name = self.nameField.text;
+    for (int i=0; i<TransactionPage.count;i++){
+        FMCollection * fm = [TransactionPage objectAtIndex: i];
+        [fm setName: name];
+    }
+}
+
+- (IBAction)hitReturn:(id)sender {
+    NSString * IP = self.IPField.text;
+    for (int i=0; i<TransactionPage.count;i++){
+        FMCollection * fm = [TransactionPage objectAtIndex: i];
+        [fm setIP: IP];
+    }
+}
 @end

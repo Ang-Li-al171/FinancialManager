@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8v-lG-0TS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8v-lG-0TS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -410,6 +410,15 @@
                                     <constraint firstAttribute="height" constant="749" id="Qzk-kj-ePO"/>
                                 </constraints>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <textField key="tableFooterView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nbe-dN-lvH">
+                                    <rect key="frame" x="0.0" y="125" width="768" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="NAME:" destination="2" eventType="editingDidEndOnExit" id="XgM-1n-6pF"/>
+                                    </connections>
+                                </textField>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="uSM-fa-PEL" customClass="CustomHomeCell">
                                         <rect key="frame" x="0.0" y="22" width="768" height="103"/>
@@ -496,6 +505,17 @@
                                     <constraint firstItem="kMz-mw-aSs" firstAttribute="leading" secondItem="MUu-YT-kVJ" secondAttribute="leading" type="default" id="qqa-R6-fHG"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PjB-kA-EB8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Has-nn-07a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didHitReturn:" destination="2" eventType="editingDidEnd" id="r1h-WK-knm"/>
+                                    <action selector="hitReturn:" destination="2" eventType="editingDidEndOnExit" id="eyF-b7-p65"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.98431378602981567" green="0.95294123888015747" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -503,8 +523,10 @@
                             <constraint firstItem="MUu-YT-kVJ" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="1nd-SF-vqJ"/>
                             <constraint firstItem="eaJ-Yz-Tcr" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="D4t-Te-VuL"/>
                             <constraint firstAttribute="bottom" secondItem="MUu-YT-kVJ" secondAttribute="bottom" constant="851" id="NLp-L0-N4S"/>
+                            <constraint firstItem="PjB-kA-EB8" firstAttribute="centerX" secondItem="Qyd-L2-wl6" secondAttribute="centerX" type="default" id="gvW-jN-xph"/>
                             <constraint firstItem="Qyd-L2-wl6" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="loX-NZ-MoG"/>
                             <constraint firstItem="Qyd-L2-wl6" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="rY0-9q-L2G"/>
+                            <constraint firstAttribute="bottom" secondItem="PjB-kA-EB8" secondAttribute="bottom" constant="215" id="rag-wK-lNo"/>
                             <constraint firstItem="eaJ-Yz-Tcr" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="sRW-hw-XhO"/>
                             <constraint firstItem="Qyd-L2-wl6" firstAttribute="top" secondItem="5" secondAttribute="top" constant="385" id="uXe-sI-a0d"/>
                             <constraint firstItem="MUu-YT-kVJ" firstAttribute="top" secondItem="5" secondAttribute="top" constant="42" id="xxl-5r-dAz"/>
@@ -515,7 +537,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <connections>
+                        <outlet property="IPField" destination="PjB-kA-EB8" id="xSh-BU-gua"/>
                         <outlet property="myHomeTableView" destination="eaJ-Yz-Tcr" id="wDr-Hv-Z5T"/>
+                        <outlet property="nameField" destination="nbe-dN-lvH" id="yPP-vu-Pmn"/>
                         <segue destination="DDf-xG-P7F" kind="push" identifier="EventCreater" id="jcl-CI-he9"/>
                     </connections>
                 </viewController>
@@ -650,96 +674,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CreateLogo.png" width="16" height="16"/>
-        <image name="bigbytelogo.png" width="16" height="16"/>
-        <image name="mic.png" width="16" height="16"/>
+        <image name="CreateLogo.png" width="1576" height="1011"/>
+        <image name="bigbytelogo.png" width="301" height="201"/>
+        <image name="mic.png" width="512" height="512"/>
     </resources>
-    <classes>
-        <class className="CustomHomeCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomHomeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="DescriLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="TitleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FMCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FMCollection" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCollection.h"/>
-            <relationships>
-                <relationship kind="action" name="setFlowAndItemSize"/>
-                <relationship kind="outlet" name="myCollectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="naviBarCollection" candidateClass="UINavigationItem"/>
-            </relationships>
-        </class>
-        <class className="FMViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="insertNewObject"/>
-                <relationship kind="outlet" name="myHomeTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="IconButton" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IconButton.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myButton" candidateClass="menuButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewEventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewEventViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="chooseExistingBarButton:"/>
-                <relationship kind="action" name="createNewEvent:"/>
-                <relationship kind="action" name="listenToMemo:"/>
-                <relationship kind="action" name="listenToName:"/>
-                <relationship kind="outlet" name="createNewEventView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="memberText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="memoText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nameText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="photoLibraryBarButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="TransController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TransController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressSubmit:"/>
-                <relationship kind="outlet" name="catePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="myView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="naviBarTrans" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="splitAll" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="totalCost" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalCostInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="transName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="transNameInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="menuButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/menuButton.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

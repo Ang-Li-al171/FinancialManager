@@ -27,6 +27,8 @@
     UITextView *myDiscussionBoard;
     UIButton *sendButton;
     FMCommunicator *myCommunicator;
+    NSString* myIP;
+    NSString* myName;
 }
 - (void) speechAuthFailed: (NSError*) error;
 @end
@@ -54,7 +56,13 @@
     return self;
 }
 
+- (void) setIP:(NSString*) ip{
+    myIP = ip;
+}
 
+- (void) setName:(NSString *)name{
+    myName = name;
+}
 // Initialize SpeechKit for this app.
 - (void) prepareSpeech
 {
@@ -196,7 +204,8 @@
     [self setFlowAndItemSize];
     
     myCommunicator = [[FMCommunicator alloc] init];
-    myCommunicator->host = @"http://10.190.55.233";
+    myCommunicator->host = myName;
+    //@"http://10.190.55.233"
     myCommunicator->port = 3333;
     
 
@@ -307,7 +316,7 @@
     
     NSString *message = mySpeechField.text;
     
-    [myCommunicator setup:message];
+    [myCommunicator setup: [NSString stringWithFormat:@"%@", message]];
     
     while(![myCommunicator isDialogAvailable]){
         
