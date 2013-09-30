@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TransController : UIViewController
+@interface TransController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UISwitch *splitAll;
 @property (weak, nonatomic) IBOutlet UIPickerView *catePicker;
 @property (weak, nonatomic) IBOutlet UINavigationItem *naviBarTrans;
