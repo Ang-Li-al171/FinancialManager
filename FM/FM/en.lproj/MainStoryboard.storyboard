@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8v-lG-0TS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8v-lG-0TS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -349,17 +349,13 @@
                             <constraint firstItem="7eX-3V-AxO" firstAttribute="leading" secondItem="nGm-IW-622" secondAttribute="leading" type="default" id="Etu-Q8-OuQ"/>
                             <constraint firstItem="Q3T-3v-jM2" firstAttribute="top" secondItem="TKf-xp-y4D" secondAttribute="top" type="default" id="HPp-UO-0MH"/>
                             <constraint firstItem="tRn-QK-XKX" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="95" id="IxO-UM-YsF"/>
-                            <constraint firstItem="9ZE-pD-vat" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="301" id="OpJ-w8-OR1"/>
                             <constraint firstAttribute="trailing" secondItem="pyi-0U-Obb" secondAttribute="trailing" constant="78" id="JKi-a5-b1K"/>
                             <constraint firstAttribute="bottom" secondItem="pyi-0U-Obb" secondAttribute="bottom" constant="98" id="LNG-2X-OkA"/>
-                            <constraint firstItem="Q3T-3v-jM2" firstAttribute="baseline" secondItem="AGu-oX-pHl" secondAttribute="baseline" type="default" id="LRT-1L-QCJ"/>
-                            <constraint firstAttribute="trailing" secondItem="9ZE-pD-vat" secondAttribute="trailing" constant="82" id="Lju-my-dYq"/>
-                            <constraint firstItem="iCr-Pc-lpG" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="100" id="QOu-gw-Z8m"/>
+                            <constraint firstItem="9ZE-pD-vat" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="301" id="OpJ-w8-OR1"/>
                             <constraint firstAttribute="trailing" secondItem="ARt-cS-8Vx" secondAttribute="trailing" constant="55" id="RbE-MU-rEK"/>
                             <constraint firstItem="7eX-3V-AxO" firstAttribute="trailing" secondItem="nGm-IW-622" secondAttribute="trailing" type="default" id="Sch-sS-IXe"/>
                             <constraint firstItem="ARt-cS-8Vx" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="63" id="UiH-ox-QvB"/>
                             <constraint firstItem="iCr-Pc-lpG" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="364" id="XBq-5c-c0R"/>
-                            <constraint firstAttribute="trailing" secondItem="TKf-xp-y4D" secondAttribute="trailing" constant="44" id="XXM-So-P82"/>
                             <constraint firstItem="AGu-oX-pHl" firstAttribute="top" secondItem="Q3T-3v-jM2" secondAttribute="top" type="default" id="YBn-Rx-O8l"/>
                             <constraint firstItem="7eX-3V-AxO" firstAttribute="baseline" secondItem="VIY-cb-ZsB" secondAttribute="baseline" type="default" id="Ym7-gL-v5K"/>
                             <constraint firstItem="iCr-Pc-lpG" firstAttribute="baseline" secondItem="tRn-QK-XKX" secondAttribute="baseline" type="default" id="ZUj-5X-JdI"/>
@@ -367,7 +363,6 @@
                             <constraint firstAttribute="trailing" secondItem="9ZE-pD-vat" secondAttribute="trailing" constant="30" id="bKX-I7-WMU"/>
                             <constraint firstItem="tRn-QK-XKX" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="118" id="cpu-B7-Vvq"/>
                             <constraint firstItem="wpb-D9-bqD" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="203" id="euB-hu-JMo"/>
-                            <constraint firstAttribute="bottom" secondItem="pyi-0U-Obb" secondAttribute="bottom" constant="99" id="ifJ-l1-pvh"/>
                             <constraint firstItem="9ZE-pD-vat" firstAttribute="leading" secondItem="TKf-xp-y4D" secondAttribute="leading" type="default" id="f47-GO-SX2"/>
                             <constraint firstItem="nGm-IW-622" firstAttribute="leading" secondItem="iCr-Pc-lpG" secondAttribute="leading" type="default" id="lOb-Oi-L5R"/>
                             <constraint firstItem="VIY-cb-ZsB" firstAttribute="top" secondItem="WgY-jp-RNs" secondAttribute="top" constant="246" id="nBP-HE-2WZ"/>
@@ -375,7 +370,6 @@
                             <constraint firstItem="nGm-IW-622" firstAttribute="trailing" secondItem="iCr-Pc-lpG" secondAttribute="trailing" type="default" id="swl-oy-iCB"/>
                             <constraint firstItem="wpb-D9-bqD" firstAttribute="baseline" secondItem="nGm-IW-622" secondAttribute="baseline" type="default" id="tnr-zq-UeM"/>
                             <constraint firstItem="AGu-oX-pHl" firstAttribute="leading" secondItem="WgY-jp-RNs" secondAttribute="leading" constant="335" id="uvV-6K-put"/>
-                            <constraint firstAttribute="trailing" secondItem="pyi-0U-Obb" secondAttribute="trailing" constant="78" id="v6L-E4-rJ2"/>
                             <constraint firstItem="tRn-QK-XKX" firstAttribute="bottom" secondItem="iCr-Pc-lpG" secondAttribute="bottom" type="default" id="zDz-jp-aBP"/>
                         </constraints>
                     </view>
@@ -660,92 +654,6 @@
         <image name="bigbytelogo.png" width="301" height="201"/>
         <image name="mic.png" width="512" height="512"/>
     </resources>
-    <classes>
-        <class className="CustomHomeCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomHomeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="DescriLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="TitleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FMCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FMCollection" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMCollection.h"/>
-            <relationships>
-                <relationship kind="action" name="setFlowAndItemSize"/>
-                <relationship kind="outlet" name="myCollectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="naviBarCollection" candidateClass="UINavigationItem"/>
-            </relationships>
-        </class>
-        <class className="FMViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="insertNewObject"/>
-                <relationship kind="outlet" name="myHomeTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="IconButton" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IconButton.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myButton" candidateClass="menuButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewEventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewEventViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="chooseExistingBarButton:"/>
-                <relationship kind="action" name="createNewEvent:"/>
-                <relationship kind="action" name="listenToMemo:"/>
-                <relationship kind="action" name="listenToName:"/>
-                <relationship kind="outlet" name="createNewEventView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="memberText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="memoText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nameText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="photoLibraryBarButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="TransController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TransController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressSubmit:"/>
-                <relationship kind="outlet" name="catePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="myView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="naviBarTrans" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="splitAll" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="totalCost" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalCostInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="transName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="transNameInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="menuButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/menuButton.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
