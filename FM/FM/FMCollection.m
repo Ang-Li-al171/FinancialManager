@@ -19,12 +19,16 @@
 #import "ATTSpeechKit.h"
 #import "SpeechConfig.h"
 #import "SpeechAuth.h"
+#import "FMCommunicator.h"
 
 @interface FMCollection () {
     UIButton *speakButton;
     UITextField *mySpeechField;
     UITextView *myDiscussionBoard;
     UIButton *sendButton;
+    FMCommunicator *myCommunicator;
+    NSString* myIP;
+    NSString* myName;
 }
 - (void) speechAuthFailed: (NSError*) error;
 @end
@@ -52,7 +56,13 @@
     return self;
 }
 
+- (void) setIP:(NSString*) ip{
+    myIP = ip;
+}
 
+- (void) setName:(NSString *)name{
+    myName = name;
+}
 // Initialize SpeechKit for this app.
 - (void) prepareSpeech
 {
@@ -193,6 +203,11 @@
     
     [self setFlowAndItemSize];
     
+    myCommunicator = [[FMCommunicator alloc] init];
+    myCommunicator->host = myName;
+    //@"http://10.190.55.233"
+    myCommunicator->port = 3333;
+    
 
     myDiscussionBoard = [[UITextView alloc]initWithFrame:CGRectMake(50, 610, 660, 300)];
     myDiscussionBoard.backgroundColor = [UIColor grayColor];
@@ -255,7 +270,8 @@
     self.numItems = [self.myTrip getEventArray].count;
     self.myTransButtons = [[NSMutableArray alloc] init];
     [self.collectionView reloadData];
-    [self.myTrip.brain encodeToFile:@"/Users/angli/Desktop/data.plist"];
+    NSString* path = [@"~/Library/data.plist" stringByExpandingTildeInPath];
+    [self.myTrip.brain encodeToFile: path];
 }
 
 //brings to the details page
@@ -297,7 +313,14 @@
 }
 
 - (IBAction)sendMessage {
+    
     NSString *message = mySpeechField.text;
+    
+    [myCommunicator setup: [NSString stringWithFormat:@"%@", message]];
+    
+    while(![myCommunicator isDialogAvailable]){
+        
+    }
     
     NSString *originalMessage = myDiscussionBoard.text;
     if (!originalMessage) {
@@ -307,6 +330,9 @@
         NSString *updatedMessage = [NSString stringWithFormat:@"%@\n%@", originalMessage, message];
         [myDiscussionBoard setText:updatedMessage];
     }
+    
+    [myDiscussionBoard setText:[myCommunicator getDialog]];
+    
     mySpeechField.text = @"";
 }
 

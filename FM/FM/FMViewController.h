@@ -12,6 +12,10 @@
 @interface FMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myHomeTableView;
+@property (weak, nonatomic) IBOutlet UITextField *IPField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+- (IBAction)NAME:(id)sender;
+- (IBAction)hitReturn:(id)sender;
 
 @property(nonatomic) NSString *myNewEventName;
 @property(nonatomic) NSString *myNewEventMemo;

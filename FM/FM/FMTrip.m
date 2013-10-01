@@ -77,7 +77,7 @@
         paidSum+= pair.paid;
         shouldPaySum+= pair.shouldPay;
     }
-    [nameEntry addObject: [NSString stringWithFormat:@"%d",shouldPaySum-paidSum]];
+    [nameEntry addObject: [NSString stringWithFormat:@"%d",paidSum-shouldPaySum]];
     return nameEntry;
 }
 

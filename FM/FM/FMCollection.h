@@ -33,6 +33,8 @@
 @property (strong, nonatomic) NSMutableArray* myTransControllers;
 @property (strong, nonatomic) NSMutableArray* myTransButtons;
 
+- (void) setIP: (NSString *) ip;
+- (void) setName: (NSString *) name;
 - (void)refresh;
 - (IBAction)setFlowAndItemSize;
 - (void)initWithTripPtr:(FMTrip *)tripPtr;

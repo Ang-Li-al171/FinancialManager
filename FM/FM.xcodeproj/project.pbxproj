@@ -12,6 +12,7 @@
 		0462F8EB17F79B29005FE399 /* FMBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8EA17F79B29005FE399 /* FMBrain.m */; };
 		0462F8EE17F79C1B005FE399 /* FMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8ED17F79C1B005FE399 /* FMTrip.m */; };
 		0462F8F417F79CE9005FE399 /* FMPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F8F317F79CE9005FE399 /* FMPair.m */; };
+		0462F95817F91DE7005FE399 /* FMCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462F95717F91DE7005FE399 /* FMCommunicator.m */; };
 		4B05DBA317F8CAD5002B2847 /* CreateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B05DBA217F8CAD5002B2847 /* CreateLogo.png */; };
 		4B451E8117F6339800A9F0BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8017F6339800A9F0BE /* UIKit.framework */; };
 		4B451E8317F6339800A9F0BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B451E8217F6339800A9F0BE /* Foundation.framework */; };
@@ -68,6 +69,8 @@
 		0462F8ED17F79C1B005FE399 /* FMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTrip.m; sourceTree = "<group>"; };
 		0462F8F217F79CE8005FE399 /* FMPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPair.h; sourceTree = "<group>"; };
 		0462F8F317F79CE9005FE399 /* FMPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPair.m; sourceTree = "<group>"; };
+		0462F95617F91DE7005FE399 /* FMCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCommunicator.h; sourceTree = "<group>"; };
+		0462F95717F91DE7005FE399 /* FMCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCommunicator.m; sourceTree = "<group>"; };
 		4B05DBA217F8CAD5002B2847 /* CreateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreateLogo.png; sourceTree = "<group>"; };
 		4B451E7D17F6339800A9F0BE /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B451E8017F6339800A9F0BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -196,6 +199,8 @@
 				4B51D0FE17F6AE790017C4D0 /* NewEventViewController.m */,
 				04296B7F17F6553700423497 /* FMCollection.h */,
 				04296B8017F6553700423497 /* FMCollection.m */,
+				0462F95617F91DE7005FE399 /* FMCommunicator.h */,
+				0462F95717F91DE7005FE399 /* FMCommunicator.m */,
 				0462F8E917F79B29005FE399 /* FMBrain.h */,
 				0462F8EC17F79C1B005FE399 /* FMTrip.h */,
 				0462F8F217F79CE8005FE399 /* FMPair.h */,
@@ -361,6 +366,7 @@
 				0462F8EE17F79C1B005FE399 /* FMTrip.m in Sources */,
 				0462F8F417F79CE9005FE399 /* FMPair.m in Sources */,
 				BCCC259017F803F600531A9E /* menuButton.m in Sources */,
+				0462F95817F91DE7005FE399 /* FMCommunicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

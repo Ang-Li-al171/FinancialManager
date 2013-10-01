@@ -52,7 +52,8 @@
 {
     [super viewDidLoad];
     
-    self.myBrain = [[FMBrain alloc] initWithFile:@"/Users/angli/Desktop/data.plist"];
+    NSString* path = [@"~/Library/data.plist" stringByExpandingTildeInPath];
+    self.myBrain = [[FMBrain alloc] initWithFile:path];
     self.myHomeTableView.dataSource = self;
     self.myHomeTableView.delegate = self;
     
@@ -135,7 +136,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [myBrain deleteTripWithIndex:indexPath.row];
-        [myBrain encodeToFile:@"/Users/angli/Desktop/data.plist"];
+        NSString* path = [@"~/Library/data.plist" stringByExpandingTildeInPath];
+        [myBrain encodeToFile: path];
         [TitleLabel removeObjectAtIndex:indexPath.row];
         [DescriLabel removeObjectAtIndex:indexPath.row];
         [TransactionPage removeObjectAtIndex:indexPath.row];
@@ -181,4 +183,19 @@
 }
 
 
+- (IBAction)NAME:(id)sender {
+    NSString *name = self.nameField.text;
+    for (int i=0; i<TransactionPage.count;i++){
+        FMCollection * fm = [TransactionPage objectAtIndex: i];
+        [fm setName: name];
+    }
+}
+
+- (IBAction)hitReturn:(id)sender {
+    NSString * IP = self.IPField.text;
+    for (int i=0; i<TransactionPage.count;i++){
+        FMCollection * fm = [TransactionPage objectAtIndex: i];
+        [fm setIP: IP];
+    }
+}
 @end
